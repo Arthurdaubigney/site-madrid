@@ -49,5 +49,5 @@ tools/                    fetch-images.py, og-images.py, preview.mjs
 
 ## Fotografías
 
-Las fotografías proceden de la colección de acceso abierto del Metropolitan Museum of Art (dominio público, CC0), descargadas y optimizadas con `npm run images`.
+Las fotografías proceden de la colección de acceso abierto del Metropolitan Museum of Art (dominio público, CC0), descargadas y optimizadas con `npm run images`; después `python3 tools/image-meta.py` calcula el color de fondo de cada foto y `python3 tools/og-images.py` genera las vistas previas sociales. Todas se muestran enteras (sin recortar la pieza).
 Son piezas de museo que sirven de ilustración: **sustitúyalas por fotografías propias de la galería** antes de presentar el sitio como inventario real.

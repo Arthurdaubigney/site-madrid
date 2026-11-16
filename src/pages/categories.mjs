@@ -109,7 +109,7 @@ const cats = [
   eyebrow: "Escultura y bronce", h1: "Compra y tasación de bronces y esculturas antiguas",
   lead: "Bronces patinados, bustos de mármol, terracotas y esculturas de taller o de autor. Estudiamos la fundición, la patina y la autoría.",
   hero: "bronce-hercules", heroRatio: "portrait",
-  h2: "Bronces de taller, mármoles y bustos", img: "busto-verschaffelt", ratio: "portrait",
+  h2: "Bronces de taller, mármoles y bustos", img: "busto-moro", ratio: "portrait",
   paras: [
     "En escultura, el valor depende de la autoría, de la calidad de la fundición o del tallado y de la conservación de la patina original. Un bronce del Renacimiento y una reducción del siglo XIX se valoran de manera muy diferente.",
     "Examinamos la pieza en persona para identificar su técnica y distinguir las ediciones antiguas de las modernas.",

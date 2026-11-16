@@ -1,6 +1,6 @@
 import { SITE, CTA } from "./config.mjs";
 import { esc, header, footer, tallyForm, renderBlock, breadcrumbs, button, arrow } from "./components.mjs";
-import { pic, imageInfo } from "./images.mjs";
+import { pic, imageInfo, ratioStyle, fitFor } from "./images.mjs";
 
 const abs = (p) => `${SITE.url}${p}`;
 const BIZ_ID = `${SITE.url}/#galeria`;
@@ -70,7 +70,7 @@ function hero(page) {
       <p class="actions">${button(CTA, page.formHref)}${second}</p>
       ${facts}
     </div>
-    <figure class="frame frame--${h.ratio || "portrait"} hero__media">${pic(h.img, { sizes: "(min-width:1024px) 44vw, 100vw", eager: true })}</figure>
+    <figure class="frame hero__media" style="${ratioStyle(h.img, 0.78, 1.3)}">${pic(h.img, { sizes: "(min-width:1024px) 44vw, 100vw", eager: true, fit: fitFor(h.img, 0.78, 1.3) })}</figure>
   </div>
 </section>`;
 }

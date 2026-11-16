@@ -1,5 +1,5 @@
 import { SITE, NAV, CTA, TALLY_FORM_ID, LEGAL } from "./config.mjs";
-import { pic } from "./images.mjs";
+import { pic, ratioStyle, imageInfo, fitFor } from "./images.mjs";
 
 export const esc = (s = "") => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
@@ -125,14 +125,14 @@ const blocks = {
     const ratio = b.ratio || "portrait";
     return `${secOpen(b)}<div class="wrap grid split split--${b.side || "right"}">
       <div class="split__text"><h2>${b.h2}</h2>${paras(b.paras)}${list}${cta}</div>
-      <figure class="frame frame--${ratio} split__media${b.moment ? " moment" : ""}"${b.moment ? " data-moment" : ""}>${pic(b.img, { sizes: "(min-width:1024px) 44vw, 100vw" })}</figure>
+      <figure class="frame split__media${b.moment ? " moment" : ""}" style="${ratioStyle(b.img, 0.78, 1.3)}"${b.moment ? " data-moment" : ""}>${pic(b.img, { sizes: "(min-width:1024px) 44vw, 100vw", fit: fitFor(b.img, 0.78, 1.3) })}</figure>
     </div></section>`;
   },
 
   cards(b) {
     const cols = b.cols || 3;
     const items = b.items.map((i) => {
-      const inner = `<div class="card__media frame--${i.ratio || "land"}">${pic(i.img, { sizes: `(min-width:1024px) ${Math.round(100 / cols)}vw, 100vw` })}</div>
+      const inner = `<div class="card__media" style="${ratioStyle(i.img, 0.75, 1.4)}">${pic(i.img, { sizes: `(min-width:1024px) ${Math.round(100 / cols)}vw, 100vw`, fit: fitFor(i.img, 0.75, 1.4) })}</div>
         <div class="card__body"><h3>${i.h3}</h3><p>${i.p}</p>${i.href ? `<span class="link">${esc(i.cta || "Ver más")}${arrow}</span>` : ""}</div>`;
       return i.href ? `<a class="card" href="${i.href}">${inner}</a>` : `<div class="card">${inner}</div>`;
     }).join("");
@@ -150,8 +150,19 @@ const blocks = {
   },
 
   wall(b) {
-    const items = b.imgs.map((s, i) => `<figure class="wall__item wall__item--${i + 1}">${pic(s, { sizes: "(min-width:1024px) 42vw, 100vw" })}</figure>`).join("");
-    return `${secOpen(b)}<div class="wrap"><div class="sec__head"><h2>${b.h2}</h2>${b.intro ? `<p class="lead">${b.intro}</p>` : ""}</div><div class="wall wall--${b.imgs.length}">${items}</div></div></section>`;
+    // Filas de altura común: cada foto ocupa un ancho proporcional a su forma, así nada se recorta.
+    const n = b.imgs.length;
+    const sizes = n === 3 ? [3] : n === 4 ? [2, 2] : n === 5 ? [3, 2] : n === 6 ? [3, 3] : [n];
+    let at = 0;
+    const rows = sizes.map((k) => {
+      const cells = b.imgs.slice(at, at + k).map((s) => {
+        const m = imageInfo(s);
+        return `<figure class="wall__item" style="--ar:${(m.w / m.h).toFixed(4)}">${pic(s, { sizes: "(min-width:1024px) 45vw, 100vw" })}</figure>`;
+      }).join("");
+      at += k;
+      return `<div class="wall__row">${cells}</div>`;
+    }).join("");
+    return `${secOpen(b)}<div class="wrap"><div class="sec__head"><h2>${b.h2}</h2>${b.intro ? `<p class="lead">${b.intro}</p>` : ""}</div><div class="wall">${rows}</div></div></section>`;
   },
 
   prose(b) {
