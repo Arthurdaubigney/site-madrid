@@ -1,0 +1,553 @@
+{
+ "salon-tesse": {
+  "alt": "Gran salón francés del siglo XVIII con boiseries doradas, lámpara de araña y mobiliario de época",
+  "w": 1509,
+  "h": 1938,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "met": 199118
+ },
+ "salon-luis-xv": {
+  "alt": "Salón de estilo Luis XV con boiseries talladas y doradas, espejos y suelo de parqué",
+  "w": 1519,
+  "h": 2000,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "met": 189425
+ },
+ "salon-burdeos": {
+  "alt": "Salón circular francés de 1785 con mesa de juego, sillería roja y lámpara de bronce",
+  "w": 2914,
+  "h": 3880,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 199390
+ },
+ "comoda-laca": {
+  "alt": "Cómoda francesa de Saunier, hacia 1780, con paneles de laca japonesa y bronces dorados",
+  "w": 3797,
+  "h": 3267,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 206968
+ },
+ "comoda-marqueteria": {
+  "alt": "Cómoda francesa de Genty, hacia 1760, con marquetería de maderas finas y bronces dorados",
+  "w": 4000,
+  "h": 3194,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 207877
+ },
+ "comoda-piffetti": {
+  "alt": "Cómoda italiana de Piffetti, hacia 1760, con marquetería de ébano, boj y nogal",
+  "w": 4000,
+  "h": 3061,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 835302
+ },
+ "consola-dorada": {
+  "alt": "Consola francesa de roble tallado, pintado y dorado con sobre de mármol, hacia 1775",
+  "w": 3915,
+  "h": 2939,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 189460
+ },
+ "sillon-heurtaut": {
+  "alt": "Sillón francés del siglo XVIII de nogal tallado con tapicería de seda bordada",
+  "w": 1448,
+  "h": 1740,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "met": 189341
+ },
+ "sillon-jacob": {
+  "alt": "Sillón de Georges Jacob de nogal tallado y dorado con seda brocada, 1788",
+  "w": 1940,
+  "h": 2000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 189387
+ },
+ "secreter-porcelana": {
+  "alt": "Secreter francés con placas de porcelana de Sèvres, hacia 1775",
+  "w": 2978,
+  "h": 3722,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 202158
+ },
+ "secreter-weisweiler": {
+  "alt": "Secreter de Weisweiler con laca japonesa y bronces dorados, hacia 1790",
+  "w": 3617,
+  "h": 3791,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 206589
+ },
+ "sopera-lamerie": {
+  "alt": "Sopera de plata de Paul de Lamerie, Londres, 1736",
+  "w": 2000,
+  "h": 1897,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 200583
+ },
+ "sopera-weyhe": {
+  "alt": "Sopera con fuente de plata y plata dorada de Weyhe, 1769-1771",
+  "w": 4000,
+  "h": 2851,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 236747
+ },
+ "sopera-roettiers": {
+  "alt": "Sopera de plata con tapa, obra de Roettiers, París, 1775-1776",
+  "w": 4000,
+  "h": 3824,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 206569
+ },
+ "sopera-percier": {
+  "alt": "Sopera de plata dorada diseñada por Percier, París, hacia 1800",
+  "w": 4000,
+  "h": 3251,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 197467
+ },
+ "bronce-mono": {
+  "alt": "Fuente de bronce con figura de mono, de Caspar Gras, hacia 1600",
+  "w": 2983,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 714900
+ },
+ "bronce-termino": {
+  "alt": "Figura de término en bronce de Annibale Fontana, finales del siglo XVII",
+  "w": 2998,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 196551
+ },
+ "bronce-hercules": {
+  "alt": "Hércules vence a Nereo, bronce de Adriaen de Vries, hacia 1610",
+  "w": 3896,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 761120
+ },
+ "bronce-yacente": {
+  "alt": "Figura femenina yacente en bronce sobre peana, mediados del siglo XVI",
+  "w": 4000,
+  "h": 3121,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 197058
+ },
+ "reloj-leroy": {
+  "alt": "Reloj de sobremesa de Julien Le Roy con porcelana de Chantilly y bronce dorado, hacia 1747",
+  "w": 3000,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 206981
+ },
+ "reloj-lenoir": {
+  "alt": "Reloj de sobremesa francés de bronce dorado y porcelana, hacia 1745",
+  "w": 1140,
+  "h": 1740,
+  "widths": [
+   480,
+   800
+  ],
+  "met": 204564
+ },
+ "reloj-pons": {
+  "alt": "Reloj de sobremesa de bronce dorado y patinado con mármol, hacia 1845",
+  "w": 1312,
+  "h": 1889,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "met": 209347
+ },
+ "reloj-brockbank": {
+  "alt": "Reloj de sobremesa inglés de caoba con bronce dorado, hacia 1800",
+  "w": 3200,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 204556
+ },
+ "sevres-bastones": {
+  "alt": "Jarrón con tapa de porcelana de Sèvres, hacia 1764, azul y oro",
+  "w": 4000,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 202178
+ },
+ "sevres-elefante": {
+  "alt": "Jarrón de Sèvres con cabezas de elefante y esmaltes policromos, hacia 1757",
+  "w": 3044,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 207383
+ },
+ "sevres-parisenfants": {
+  "alt": "Jarrón de Sèvres con tapa y escena pintada, hacia 1778",
+  "w": 4000,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 202183
+ },
+ "sevres-perlas": {
+  "alt": "Jarrón de Sèvres de azul real con medallón pintado y bronce dorado, hacia 1767",
+  "w": 1844,
+  "h": 1580,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 202186
+ },
+ "meissen-helado": {
+  "alt": "Cubo de porcelana de Meissen con decoración de flores y asas doradas",
+  "w": 3311,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 239350
+ },
+ "retrato-andaluz": {
+  "alt": "Retrato de caballero al óleo sobre lienzo, escuela andaluza",
+  "w": 3142,
+  "h": 3783,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 437728
+ },
+ "cabeza-castellana": {
+  "alt": "Cabeza de hombre joven al óleo, escuela castellana del siglo XVII",
+  "w": 2868,
+  "h": 3737,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 437734
+ },
+ "retrato-terborch": {
+  "alt": "Retrato de hombre sentado, óleo sobre tabla de Gerard ter Borch el Joven",
+  "w": 3157,
+  "h": 3784,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 435715
+ },
+ "bodegon-fantin": {
+  "alt": "Bodegón con pensamientos y manzanas, óleo de Fantin-Latour, 1874",
+  "w": 3790,
+  "h": 3154,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 436294
+ },
+ "bodegon-renoir": {
+  "alt": "Bodegón con melocotones, óleo de Renoir, 1881",
+  "w": 3761,
+  "h": 3126,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 437429
+ },
+ "goya-maria-luisa": {
+  "alt": "Retrato de María Luisa de Parma, reina de España, óleo de Goya",
+  "w": 2908,
+  "h": 3765,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 436552
+ },
+ "goya-martinez": {
+  "alt": "Retrato de Sebastián Martínez y Pérez, óleo de Goya, 1792",
+  "w": 2675,
+  "h": 3698,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 436541
+ },
+ "goya-toros": {
+  "alt": "Corrida de toros en plaza partida, óleo de Goya, hacia 1810",
+  "w": 3826,
+  "h": 3001,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 436554
+ },
+ "paisaje-koch": {
+  "alt": "Paisaje heroico con arcoíris, óleo de Joseph Anton Koch, 1824",
+  "w": 3343,
+  "h": 3772,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 439844
+ },
+ "busto-canova": {
+  "alt": "Busto de mármol de Carrara de Antonio Canova, hacia 1810",
+  "w": 3044,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 239576
+ },
+ "busto-verschaffelt": {
+  "alt": "Busto de mármol de un caballero inglés, de Verschaffelt, 1740",
+  "w": 473,
+  "h": 700,
+  "widths": [
+   473
+  ],
+  "met": 206712
+ },
+ "busto-roland": {
+  "alt": "Busto de mármol de Philippe Laurent Roland, hacia 1785",
+  "w": 3092,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 208978
+ },
+ "busto-moro": {
+  "alt": "Busto de mármol policromo de un moro, siglo XVIII",
+  "w": 3067,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 826325
+ },
+ "caja-oro-1757": {
+  "alt": "Tabaquera francesa de oro cincelado, 1757-1758",
+  "w": 680,
+  "h": 515,
+  "widths": [
+   480
+  ],
+  "met": 206162
+ },
+ "caja-oro-heric": {
+  "alt": "Tabaquera de oro de Claude Héricourt, 1768-1769",
+  "w": 1519,
+  "h": 1098,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "met": 202280
+ },
+ "caja-oro-bodson": {
+  "alt": "Tabaquera ovalada de oro de Henry Bodson, 1768-1769",
+  "w": 1949,
+  "h": 1481,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 206418
+ },
+ "estuche-te": {
+  "alt": "Estuche de té esmaltado sobre cobre con decoración pintada, hacia 1768",
+  "w": 4000,
+  "h": 3559,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 203643
+ },
+ "cofre-esmalte": {
+  "alt": "Cofre de esmalte pintado sobre cobre con metal dorado, hacia 1770",
+  "w": 4000,
+  "h": 3546,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 203293
+ },
+ "cofre-genesis": {
+  "alt": "Cofre de esmalte pintado con escenas del Génesis, de Suzanne de Court, siglo XVII",
+  "w": 4000,
+  "h": 3376,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 206832
+ }
+}

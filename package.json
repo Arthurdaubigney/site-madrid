@@ -1,0 +1,16 @@
+{
+  "name": "galeria-anticuaria-aldaba",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sitio institucional estático de una galería de antigüedades y gabinete de tasación en Madrid.",
+  "scripts": {
+    "build": "node build.mjs",
+    "preview": "node tools/preview.mjs",
+    "images": "python3 tools/fetch-images.py"
+  },
+  "devDependencies": {
+    "@fontsource/cormorant-garamond": "5.2.5",
+    "@fontsource-variable/hanken-grotesk": "5.2.5"
+  }
+}
