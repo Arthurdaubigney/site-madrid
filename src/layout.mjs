@@ -111,7 +111,7 @@ export function renderPage(page, css, js) {
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-${page.bare ? "" : `<link rel="preload" as="image" href="${heroSrc}" imagesrcset="${heroInfo.widths.map((w) => `/img/${page.hero.img}-${w}.webp ${w}w`).join(", ")}" imagesizes="(min-width:1024px) 44vw, 100vw" fetchpriority="high">`}
+${page.bare ? "" : `<link rel="preload" as="image" media="(min-width:1024px)" href="${heroSrc}" imagesrcset="${heroInfo.widths.map((w) => `/img/${page.hero.img}-${w}.webp ${w}w`).join(", ")}" imagesizes="(min-width:1024px) 44vw, 100vw" fetchpriority="high">`}
 <script>document.documentElement.classList.add("js")</script>
 <style>${css}</style>
 <script type="application/ld+json">${JSON.stringify(schemaGraph(page))}</script>
