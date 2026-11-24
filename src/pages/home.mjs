@@ -8,7 +8,7 @@ export default [{
   crumbs: [],
   hero: {
     eyebrow: "Galería y gabinete de tasación · Barrio de Salamanca",
-    h1: "Galería de antigüedades en Madrid: tasación, peritaje y compra de obras de arte",
+    h1: "Galería de antigüedades en Madrid: <em>tasación, peritaje y compra</em> de obras de arte",
     lead: "Valoramos y compramos mobiliario antiguo, pintura clásica, plata, bronces y piezas de colección. Visitamos su domicilio en Madrid sin coste y nos desplazamos a toda España, con total discreción.",
     img: "salon-tesse",
     secondary: ["Qué compramos", P.compra],
@@ -17,7 +17,7 @@ export default [{
   blocks: [
     {
       t: "links", id: "servicios",
-      h2: "Tasación, compra y herencias",
+      h2: "Tasación, <em>compra</em> y herencias",
       intro: "Tres servicios con un mismo criterio: examinar cada pieza en persona y decirle con claridad lo que vale.",
       items: [
         { label: "Tasación de antigüedades y obras de arte", p: "Peritaje de muebles, pintura, plata, bronces y objetos de colección, con informe escrito.", href: P.tasacion },
@@ -27,7 +27,7 @@ export default [{
     },
     {
       t: "cards", alt: true, cols: 3, id: "que-compramos",
-      h2: "Qué antigüedades compramos en Madrid",
+      h2: "Qué <em>antigüedades</em> compramos en Madrid",
       intro: "Seis especialidades, del siglo XVI al XIX, con atención a la autoría, el estado y la procedencia.",
       items: [
         { h3: "Muebles antiguos", p: "Cómodas, consolas, secreteres y sillería de ebanistas de época.", img: "consola-dorada", href: P.muebles, cta: "Ver muebles" },
@@ -40,7 +40,7 @@ export default [{
     },
     {
       t: "steps", id: "como-trabajamos",
-      h2: "Cómo es una tasación con nosotros",
+      h2: "Cómo es una <em>tasación</em> con nosotros",
       intro: "Un proceso corto, sin compromiso y con una sola persona de contacto desde el primer mensaje.",
       items: [
         { h3: "Nos escribe", p: "Fotografías, medidas y lo que sepa de la pieza, en el formulario." },
@@ -51,7 +51,7 @@ export default [{
     },
     {
       t: "split", id: "confianza", moment: true, side: "right", ratio: "portrait",
-      h2: "Peritaje serio y discreción absoluta",
+      h2: "Peritaje serio y <em>discreción</em> absoluta",
       paras: [
         "Una galería de antigüedades tiene que ser también un gabinete de tasación fiable. Por eso examinamos cada pieza en persona, estudiamos su documentación y le decimos con franqueza cuándo vale mucho, cuándo vale poco y por qué.",
         "Todo lo que nos confía, la pieza, su propietario y su ubicación, se trata con la máxima reserva.",
@@ -62,13 +62,13 @@ export default [{
     },
     {
       t: "wall", id: "piezas",
-      h2: "Del Renacimiento al siglo XIX",
+      h2: "Del <em>Renacimiento</em> al siglo XIX",
       intro: "Algunas de las especialidades que valoramos, desde bronces del siglo XVI hasta retratos y porcelana del XVIII.",
       imgs: ["goya-maria-luisa", "bronce-mono", "sevres-elefante", "comoda-laca"],
     },
     {
       t: "links", alt: true, id: "zonas",
-      h2: "Dónde trabajamos",
+      h2: "Dónde <em>trabajamos</em>",
       intro: "Con sede en el Barrio de Salamanca, visitamos viviendas de toda la Comunidad de Madrid y de España.",
       items: [
         { label: "Barrio de Salamanca", p: "Valoración a domicilio en el barrio donde tiene su sede la galería.", href: P.salamanca },

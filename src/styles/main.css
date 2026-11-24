@@ -6,9 +6,10 @@
 @font-face{font-family:"Hanken Grotesk";font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/hanken-grotesk-latin-wght-normal.woff2) format("woff2")}
 
 :root{
-  --bg:#f6f1e7;--bg-alt:#ece4d3;--ink:#1d1b17;--muted:#5a5347;--line:rgba(29,27,23,.15);
-  --accent:#6e1e2c;--accent-hover:#561522;--on-accent:#f6f1e7;
-  --dark:#14211d;--dark-ink:#efe8d8;--dark-muted:#b9b4a4;--brass:#c9a961;
+  --bg:#f8f1e4;--bg-alt:#efe3cc;--ink:#211a16;--muted:#5d5144;--line:rgba(33,26,22,.16);
+  --accent:#7a1e2c;--accent-hover:#5e1520;--on-accent:#f8f1e4;
+  --gold:#a8782a;
+  --dark:#2b1418;--dark-ink:#f3e9d6;--dark-muted:#c4b7a3;--brass:#d4af68;
   --display:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Georgia,serif;
   --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
   --nav:76px;--gut:clamp(24px,5.5vw,80px);--wrap:1280px;
@@ -312,3 +313,44 @@ a.card:hover .card__media img{transform:scale(1.03)}
 .sheet__tel a{color:var(--ink);display:inline-block;padding:12px 4px}
 .fact a{color:var(--ink);text-underline-offset:3px;white-space:nowrap}
 @media (max-width:639px){.foot__tel a,.form__tel a{display:inline-block;padding:10px 2px}}
+
+/* ── Ambiente madrileño: arcos, frisos y dorados ───────────────── */
+h1 em,h2 em{font-style:italic;font-weight:500;color:var(--accent)}
+.sec--dark h2 em,.sec--dark h1 em{color:var(--brass)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+
+/* Ornamento de títulos: filete dorado con rombo */
+.sec__head::before,.faq__head::before,.form__intro::before{content:"";display:block;width:84px;height:12px;margin-bottom:var(--s5);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='12' viewBox='0 0 84 12'%3E%3Cpath d='M0 6h31M53 6h31' stroke='%23a8782a' stroke-width='1'/%3E%3Cpath d='M42 1l5 5-5 5-5-5z' fill='none' stroke='%23a8782a' stroke-width='1'/%3E%3C/svg%3E") no-repeat}
+.sec--dark .sec__head::before{filter:brightness(1.25)}
+
+/* Marcos en arco para las fotografías verticales */
+.arch{border-radius:999px 999px 0 0}
+.arch img{border-radius:999px 999px 0 0}
+.hero__media,.split__media{border-color:rgba(168,120,42,.45);background:var(--bg-alt)}
+.hero__media.arch,.split__media.arch{padding-top:clamp(12px,1.4vw,20px)}
+
+/* Arcada tenue al pie del hero (patio de arcos) */
+.hero{position:relative;background:radial-gradient(120% 70% at 85% 0%,rgba(168,120,42,.10),transparent 60%)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34px;opacity:.5;pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='34' viewBox='0 0 44 34'%3E%3Cpath d='M2 34V16a20 20 0 0 1 40 0v18' fill='none' stroke='%23a8782a' stroke-width='1' opacity='.55'/%3E%3C/svg%3E") repeat-x 0 100%}
+
+/* Friso de azulejo (estrella de ocho puntas) */
+.azulejo{height:22px;background:var(--dark) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M11 2l2.2 4.8L18 5l-1.8 4.8L21 11l-4.8 1.2L18 17l-4.8-1.8L11 20l-2.2-4.8L4 17l1.8-4.8L1 11l4.8-1.2L4 5l4.8 1.8z' fill='none' stroke='%23d4af68' stroke-width='.9'/%3E%3C/svg%3E") repeat-x center}
+.sec--dark{position:relative}
+.sec--dark::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--brass),transparent);opacity:.7}
+
+/* Detalles en bloques y tarjetas */
+.fact{border-top:1px solid var(--line);position:relative}
+.fact::before{content:"";position:absolute;left:0;top:-1px;width:44px;height:2px;background:var(--gold)}
+.step{border-top-color:rgba(212,175,104,.35)}
+a.card:hover{border-color:var(--gold)}
+.card{background:#fbf6ea}
+.rowlink:hover strong{color:var(--accent)}
+.nav{box-shadow:0 1px 0 rgba(168,120,42,.35)}
+.brand .mark{color:var(--accent)}
+.btn--primary{box-shadow:inset 0 0 0 1px rgba(212,175,104,.0)}
+.btn--primary:hover{box-shadow:inset 0 0 0 1px var(--brass)}
+.ticks li::before{border-color:var(--gold)}
+.hero__facts li::before{border-color:var(--gold)}
+.foot{border-top:0}

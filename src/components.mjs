@@ -1,5 +1,5 @@
 import { SITE, NAV, CTA, TALLY_FORM_ID, LEGAL, PHONES, phoneText, phoneHref } from "./config.mjs";
-import { pic, ratioStyle, imageInfo, fitFor } from "./images.mjs";
+import { pic, ratioStyle, imageInfo, fitFor, frameRatio } from "./images.mjs";
 
 export const esc = (s = "") => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
@@ -47,7 +47,8 @@ export function header(current, formHref) {
 // ── Pie ────────────────────────────────────────────────────────────────────
 export function footer() {
   const cats = NAV[1].children.map((c) => `<li><a href="${c.href}">${esc(c.label)}</a></li>`).join("");
-  return `<footer class="foot">
+  return `<div class="azulejo" aria-hidden="true"></div>
+<footer class="foot">
   <div class="wrap">
     <div class="foot__top">
       <div class="foot__brand">
@@ -87,7 +88,7 @@ export function footer() {
  * Con TALLY_FORM_ID (src/config.mjs) incrusta el iframe de Tally con carga diferida;
  * sin él muestra una tarjeta de contacto por correo lista para sustituir.
  */
-export function tallyForm({ title = "Solicite su tasación gratuita", lead } = {}) {
+export function tallyForm({ title = "Solicite su <em>tasación gratuita</em>", lead } = {}) {
   const intro =
     lead ||
     "Cuéntenos qué pieza desea valorar y adjunte unas fotografías. Le respondemos con una valoración orientativa y, si procede, concertamos una visita a domicilio sin coste.";
@@ -105,7 +106,7 @@ export function tallyForm({ title = "Solicite su tasación gratuita", lead } = {
   return `<section class="sec sec--alt form" id="formulario" aria-labelledby="form-h">
   <div class="wrap grid form__grid">
     <div class="form__intro">
-      <h2 id="form-h">${esc(title)}</h2>
+      <h2 id="form-h">${title}</h2>
       <p class="lead">${esc(intro)}</p>
       <ul class="ticks">
         <li>Valoración orientativa gratuita y sin compromiso</li>
@@ -130,7 +131,7 @@ const blocks = {
     const ratio = b.ratio || "portrait";
     return `${secOpen(b)}<div class="wrap grid split split--${b.side || "right"}">
       <div class="split__text"><h2>${b.h2}</h2>${paras(b.paras)}${list}${cta}</div>
-      <figure class="frame split__media${b.moment ? " moment" : ""}" style="${ratioStyle(b.img, 0.78, 1.3)}"${b.moment ? " data-moment" : ""}>${pic(b.img, { sizes: "(min-width:1024px) 44vw, 100vw", fit: fitFor(b.img, 0.78, 1.3) })}</figure>
+      <figure class="frame split__media${frameRatio(b.img, 0.78, 1.3) < 1.05 ? " arch" : ""}${b.moment ? " moment" : ""}" style="${ratioStyle(b.img, 0.78, 1.3)}"${b.moment ? " data-moment" : ""}>${pic(b.img, { sizes: "(min-width:1024px) 44vw, 100vw", fit: fitFor(b.img, 0.78, 1.3) })}</figure>
     </div></section>`;
   },
 

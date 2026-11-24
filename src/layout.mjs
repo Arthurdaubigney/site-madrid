@@ -1,6 +1,6 @@
 import { SITE, CTA, PHONES } from "./config.mjs";
 import { esc, header, footer, tallyForm, renderBlock, breadcrumbs, button, arrow } from "./components.mjs";
-import { pic, imageInfo, ratioStyle, fitFor } from "./images.mjs";
+import { pic, imageInfo, ratioStyle, fitFor, frameRatio } from "./images.mjs";
 
 const abs = (p) => `${SITE.url}${p}`;
 const BIZ_ID = `${SITE.url}/#galeria`;
@@ -67,12 +67,12 @@ function hero(page) {
     <div class="hero__text">
       ${home ? "" : breadcrumbs(page.crumbs)}
       ${h.eyebrow ? `<p class="eyebrow">${h.eyebrow}</p>` : ""}
-      <h1>${h.h1}</h1>
+      <h1>${h.h1.includes("<em>") ? h.h1 : h.h1.replace(/ en ([^<]+)$/, " en <em>$1</em>")}</h1>
       <p class="lead">${h.lead}</p>
       <p class="actions">${button(CTA, page.formHref)}${second}</p>
       ${facts}
     </div>
-    <figure class="frame hero__media" style="${ratioStyle(h.img, 0.78, 1.3)}">${pic(h.img, { sizes: "(min-width:1024px) 44vw, 100vw", eager: true, fit: fitFor(h.img, 0.78, 1.3) })}</figure>
+    <figure class="frame hero__media${frameRatio(h.img, 0.78, 1.3) < 1.05 ? " arch" : ""}" style="${ratioStyle(h.img, 0.78, 1.3)}">${pic(h.img, { sizes: "(min-width:1024px) 44vw, 100vw", eager: true, fit: fitFor(h.img, 0.78, 1.3) })}</figure>
   </div>
 </section>`;
 }
@@ -84,7 +84,7 @@ export function renderPage(page, css, js) {
   const ogImg = abs(`/og/${page.ogImage || page.hero.img}.jpg`);
   const heroInfo = imageInfo(page.hero.img);
   const heroSrc = `/img/${page.hero.img}-${heroInfo.widths.includes(800) ? 800 : heroInfo.widths.at(-1)}.webp`;
-  const faq = page.faq ? renderBlock({ t: "faq", key: "p", h2: "Preguntas frecuentes", intro: page.faqIntro === false ? "" : "Lo que más nos preguntan antes de pedir una tasación.", more: page.faqMore, items: page.faq }) : "";
+  const faq = page.faq ? renderBlock({ t: "faq", key: "p", h2: "Preguntas <em>frecuentes</em>", intro: page.faqIntro === false ? "" : "Lo que más nos preguntan antes de pedir una tasación.", more: page.faqMore, items: page.faq }) : "";
   const main = (page.bare ? "" : hero(page)) + (page.blocks || []).map(renderBlock).join("\n") + faq + (hasForm ? tallyForm(page.formCopy) : "");
   return `<!doctype html>
 <html lang="es" data-motion="on">
@@ -96,7 +96,7 @@ export function renderPage(page, css, js) {
 <link rel="canonical" href="${url}">
 <meta name="robots" content="${page.noindex ? "noindex, follow" : "index, follow, max-image-preview:large"}">
 <link rel="alternate" hreflang="es-ES" href="${url}">
-<meta name="theme-color" content="#f6f1e7">
+<meta name="theme-color" content="#f8f1e4">
 <meta property="og:type" content="${page.path === "/" ? "website" : "article"}">
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="${esc(SITE.brand)}">
