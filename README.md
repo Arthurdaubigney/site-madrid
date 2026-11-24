@@ -23,7 +23,7 @@ npm run preview      # sirve dist/ en http://localhost:4173
 | Datos legales (razón social, NIF, domicilio) para el Aviso legal | `LEGAL` en `src/config.mjs` |
 | Nombre de marca | `SITE.brand` / `SITE.short` (marca provisional «Aldaba»: verifique disponibilidad) |
 
-Mientras no haya `TALLY_FORM_ID`, el módulo del formulario muestra una tarjeta de contacto por correo.
+El formulario Tally (`https://tally.so/r/PRzLpb`) ya está configurado en `TALLY_FORM_ID`. Si se vaciara, el módulo mostraría una tarjeta de contacto por correo.
 Con el ID, `TallyForm` (`tallyForm()` en `src/components.mjs`) incrusta el iframe con carga diferida y ajuste automático de altura.
 
 ## Estructura

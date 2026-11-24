@@ -19,7 +19,7 @@ export const SITE = {
 // ── Formulario Tally ───────────────────────────────────────────────────────
 // Pegue aquí el ID de su formulario (la parte final de https://tally.so/r/XXXXXX)
 // o compile con:  TALLY_FORM_ID=XXXXXX npm run build
-export const TALLY_FORM_ID = process.env.TALLY_FORM_ID || "";
+export const TALLY_FORM_ID = process.env.TALLY_FORM_ID || "PRzLpb";
 
 // ── Datos legales (Aviso legal, LSSI) ──────────────────────────────────────
 // Rellene estos campos y aparecerán en /aviso-legal/. Vacíos, no se muestran.
