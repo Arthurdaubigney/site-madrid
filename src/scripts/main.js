@@ -38,22 +38,24 @@
     moments.forEach((m) => io.observe(m.parentElement));
   } else moments.forEach((m) => m.classList.add("is-in"));
 
-  // Tally: carga el iframe y su script cuando el formulario se acerca a la pantalla
+  // Tally: se carga su script cuando el formulario se acerca a la pantalla; él mismo asigna el iframe
+  // y ajusta su altura (dynamicHeight), así que no hay barra de desplazamiento interior.
   const frames = $$("iframe[data-tally-src]");
   if (frames.length) {
-    const load = (f) => {
-      f.src = f.dataset.tallySrc;
-      if (!window.Tally && !$("script[data-tally]")) {
-        const s = document.createElement("script");
-        s.src = "https://tally.so/widgets/embed.js";
-        s.dataset.tally = "1";
-        s.onload = () => window.Tally && window.Tally.loadEmbeds();
-        document.body.appendChild(s);
-      }
+    let started = false;
+    const direct = () => frames.forEach((f) => { if (!f.src) f.src = f.dataset.tallySrc; });
+    const start = () => {
+      if (started) return;
+      started = true;
+      const s = document.createElement("script");
+      s.src = "https://tally.so/widgets/embed.js";
+      s.onload = () => (window.Tally ? window.Tally.loadEmbeds() : direct());
+      s.onerror = direct;
+      document.body.appendChild(s);
     };
     if ("IntersectionObserver" in window) {
-      const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { load(e.target); io.unobserve(e.target); } }), { rootMargin: "400px" });
+      const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { start(); io.disconnect(); } }, { rootMargin: "400px" });
       frames.forEach((f) => io.observe(f));
-    } else frames.forEach(load);
+    } else start();
   }
 })();

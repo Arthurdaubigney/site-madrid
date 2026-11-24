@@ -93,7 +93,7 @@ export function tallyForm({ title = "Solicite su tasación gratuita", lead } = {
     "Cuéntenos qué pieza desea valorar y adjunte unas fotografías. Le respondemos con una valoración orientativa y, si procede, concertamos una visita a domicilio sin coste.";
   const frame = TALLY_FORM_ID
     ? `<div class="tally" data-tally>
-        <iframe data-tally-src="https://tally.so/embed/${esc(TALLY_FORM_ID)}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="520" title="Formulario de solicitud de tasación gratuita" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+        <iframe data-tally-src="https://tally.so/embed/${esc(TALLY_FORM_ID)}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="560" scrolling="no" title="Formulario de solicitud de tasación gratuita" frameborder="0" marginheight="0" marginwidth="0"></iframe>
         <noscript><p>Active JavaScript para ver el formulario o escríbanos a <a href="mailto:${SITE.email}">${SITE.email}</a>.</p></noscript>
       </div>`
     : `<div class="tally tally--fallback" data-tally>
