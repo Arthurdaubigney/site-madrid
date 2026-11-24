@@ -375,3 +375,22 @@ a.card:hover{border-color:var(--gold)}
 /* Zonas táctiles */
 .crumbs a{display:inline-block;padding:8px 0}
 .foot__col a{display:inline-block;padding:6px 0}
+
+/* ── Logotipo: arco con aldaba + composición en dos líneas ── */
+.brand{gap:12px}
+.brand .mark{width:auto;height:46px;color:var(--accent);flex:none;overflow:visible}
+.brand .mark__in{stroke:var(--gold)}
+.brand .mark__ring{stroke:var(--accent)}
+.brand .mark__dot{fill:var(--gold)}
+.brand__text{display:flex;flex-direction:column;line-height:1}
+.brand__name{font-family:var(--display);font-weight:600;font-size:30px;letter-spacing:.01em;line-height:.95}
+.brand__sub{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--muted);margin-top:5px;letter-spacing:.02em}
+.brand:hover .mark__ring{transform-origin:17px 14px;animation:knock 700ms var(--ease)}
+@keyframes knock{0%{transform:rotate(0)}30%{transform:rotate(-9deg)}60%{transform:rotate(5deg)}100%{transform:rotate(0)}}
+.foot .brand .mark{color:var(--brass)}
+.foot .brand .mark__ring{stroke:var(--brass)}
+.foot .brand .mark__in{stroke:rgba(212,175,104,.6)}
+.foot .brand .mark__dot{fill:var(--brass)}
+.foot .brand__name{color:var(--dark-ink);font-size:32px}
+.foot .brand__sub{color:var(--dark-muted)}
+@media (max-width:639px){.brand .mark{height:38px}.brand__name{font-size:26px}}

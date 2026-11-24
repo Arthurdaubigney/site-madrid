@@ -5,8 +5,7 @@ export const esc = (s = "") => String(s).replace(/&/g, "&amp;").replace(/</g, "&
 
 export const arrow = `<svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
-const mark = `<svg class="mark" width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true"><path d="M5 27V13a10 10 0 0 1 20 0v14" stroke="currentColor" stroke-width="1.4"/><circle cx="15" cy="17" r="4.2" stroke="currentColor" stroke-width="1.4"/><circle cx="15" cy="10" r="1.3" fill="currentColor"/></svg>`;
-
+const mark = `<svg class="mark" width="34" height="40" viewBox="0 0 34 40" fill="none" aria-hidden="true"><path class="mark__out" d="M2 39V16a15 15 0 0 1 30 0v23" stroke="currentColor" stroke-width="2.1"/><path class="mark__in" d="M7 39V17a10 10 0 0 1 20 0v22" stroke-width="1.3"/><circle class="mark__dot" cx="17" cy="12" r="1.9"/><path class="mark__ring" d="M17 14v3" stroke-width="1.5"/><circle class="mark__ring" cx="17" cy="25" r="6.4" stroke-width="1.8"/><path class="mark__dot" d="M17 34.6l2.3 2.3-2.3 2.3-2.3-2.3z"/></svg>`;
 /** Botón o enlace de acción. `kind`: primary | secondary */
 export function button(label, href, kind = "primary", { arrowIcon = true, extra = "" } = {}) {
   return `<a class="btn btn--${kind}" href="${href}"${extra}>${esc(label)}${arrowIcon ? arrow : ""}</a>`;
@@ -39,7 +38,7 @@ export function header(current, formHref) {
   return `<header class="nav" id="top-nav">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
-    <a class="brand" href="/" aria-label="${esc(SITE.brand)}, inicio">${mark}<span class="brand__name">${esc(SITE.brand)}</span></a>
+    <a class="brand" href="/" aria-label="${esc(SITE.brand)}, inicio">${mark}<span class="brand__text"><span class="brand__name">${esc(SITE.short)}</span><span class="brand__sub">Galería anticuaria</span></span></a>
     <nav class="nav__main" aria-label="Principal"><ul>${items}</ul></nav>
     <a class="nav__tel" href="${phoneHref(PHONES[0])}" aria-label="Llamar al ${phoneText(PHONES[0])}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>${phoneText(PHONES[0])}</span></a>
     <a class="btn btn--primary nav__cta" href="${formHref}">${esc(CTA)}</a>
@@ -61,7 +60,7 @@ export function footer() {
   <div class="wrap">
     <div class="foot__top">
       <div class="foot__brand">
-        <a class="brand brand--foot" href="/" aria-label="${esc(SITE.brand)}, inicio">${mark}<span class="brand__name">${esc(SITE.brand)}</span></a>
+        <a class="brand brand--foot" href="/" aria-label="${esc(SITE.brand)}, inicio">${mark}<span class="brand__text"><span class="brand__name">${esc(SITE.short)}</span><span class="brand__sub">Galería anticuaria</span></span></a>
         <p>Galería de antigüedades y gabinete de tasación en ${SITE.locality}. Tasación pericial, compra directa y gestión de herencias con discreción.</p>
         <p class="foot__place">${SITE.locality}. Visitas con cita previa.</p>
         <p class="foot__tel">Teléfono: ${phoneLinks()}</p>

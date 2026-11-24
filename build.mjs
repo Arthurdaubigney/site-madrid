@@ -59,7 +59,7 @@ write("404.html", renderPage({
 const urls = pages.map((p) => `<url><loc>${SITE.url}${p.path}</loc><changefreq>monthly</changefreq><priority>${p.path === "/" ? "1.0" : p.path.split("/").length > 4 ? "0.6" : "0.8"}</priority></url>`).join("");
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>\n`);
 write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`);
-write("favicon.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><rect width="30" height="30" fill="#f6f1e7"/><g fill="none" stroke="#6e1e2c" stroke-width="1.6"><path d="M5 27V13a10 10 0 0 1 20 0v14"/><circle cx="15" cy="17" r="4.2"/></g><circle cx="15" cy="10" r="1.4" fill="#6e1e2c"/></svg>`);
+write("favicon.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 40"><rect width="34" height="40" fill="#f8f1e4"/><g fill="none" stroke="#7a1e2c"><path d="M3 39V16a14 14 0 0 1 28 0v23" stroke-width="2"/><circle cx="17" cy="25" r="6.4" stroke-width="2.2"/></g><path d="M7.5 39V17a9.5 9.5 0 0 1 19 0v22" fill="none" stroke="#a8782a" stroke-width="1.2"/><circle cx="17" cy="12" r="2" fill="#a8782a"/></svg>`);
 
 console.log(`✔ ${pages.length} páginas generadas en dist/ · Tally: ${TALLY_FORM_ID ? "configurado" : "pendiente (tarjeta de contacto)"}`);
 if (problems.length) console.log("⚠ SEO:\n  " + problems.join("\n  "));
