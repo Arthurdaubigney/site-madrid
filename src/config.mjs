@@ -47,4 +47,9 @@ export const NAV = [
   { label: "La galería", href: "/la-galeria/" },
 ];
 
+// Teléfonos de la galería (formato nacional, sin prefijo). Se muestran agrupados y como enlaces tel:.
+export const PHONES = ["625201148", "625201448"];
+export const phoneText = (n) => `${n.slice(0, 3)} ${n.slice(3, 5)} ${n.slice(5, 7)} ${n.slice(7)}`;
+export const phoneHref = (n) => `tel:+34${n}`;
+
 export const CTA = "Solicitar tasación gratuita";

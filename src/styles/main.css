@@ -299,3 +299,15 @@ a.card:hover .card__media img{transform:scale(1.03)}
 .doc h2{font-size:clamp(24px,2.2vw,32px);margin:var(--s7) 0 var(--s3)}
 .doc p{color:var(--ink)}
 .doc a{text-decoration-thickness:1px;text-underline-offset:3px}
+
+/* Teléfonos */
+.phones a{text-decoration:none;font-weight:500;white-space:nowrap;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;padding-bottom:2px;transition:background-size var(--d-medium) var(--ease)}
+.phones a:hover{background-size:100% 1px}
+.form__tel{margin-top:var(--s5);color:var(--muted)}
+.form__tel a{color:var(--ink)}
+.foot__tel{color:var(--dark-ink)!important;margin-top:var(--s2)}
+.foot__tel a{color:var(--dark-ink)}
+.sheet__tel{margin:0;color:var(--muted);text-align:center}
+.sheet__tel a{color:var(--ink);display:inline-block;padding:12px 4px}
+.fact a{color:var(--ink);text-underline-offset:3px;white-space:nowrap}
+@media (max-width:639px){.foot__tel a,.form__tel a{display:inline-block;padding:10px 2px}}

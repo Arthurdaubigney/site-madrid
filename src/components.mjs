@@ -1,4 +1,4 @@
-import { SITE, NAV, CTA, TALLY_FORM_ID, LEGAL } from "./config.mjs";
+import { SITE, NAV, CTA, TALLY_FORM_ID, LEGAL, PHONES, phoneText, phoneHref } from "./config.mjs";
 import { pic, ratioStyle, imageInfo, fitFor } from "./images.mjs";
 
 export const esc = (s = "") => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -15,6 +15,8 @@ export function button(label, href, kind = "primary", { arrowIcon = true, extra 
 export function textLink(label, href) {
   return `<a class="link" href="${href}">${esc(label)}${arrow}</a>`;
 }
+
+export const phoneLinks = (cls = "phones") => `<span class="${cls}">${PHONES.map((n) => `<a href="${phoneHref(n)}" aria-label="Llamar al ${phoneText(n)}">${phoneText(n)}</a>`).join('<span aria-hidden="true"> · </span>')}</span>`;
 
 // ── Cabecera ───────────────────────────────────────────────────────────────
 export function header(current, formHref) {
@@ -37,6 +39,7 @@ export function header(current, formHref) {
   <div class="sheet" id="menu-movil" hidden>
     <nav aria-label="Menú móvil"><ul>${sheet}<li><a href="/preguntas-frecuentes/">Preguntas frecuentes</a></li><li><a href="/contacto/">Contacto</a></li></ul></nav>
     <a class="btn btn--primary" href="${formHref}">${esc(CTA)}</a>
+    <p class="sheet__tel">Llame a la galería: ${phoneLinks()}</p>
   </div>
 </header>`;
 }
@@ -51,6 +54,7 @@ export function footer() {
         <a class="brand brand--foot" href="/" aria-label="${esc(SITE.brand)}, inicio">${mark}<span class="brand__name">${esc(SITE.brand)}</span></a>
         <p>Galería de antigüedades y gabinete de tasación en ${SITE.locality}. Tasación pericial, compra directa y gestión de herencias con discreción.</p>
         <p class="foot__place">${esc(SITE.district)}, ${SITE.locality}. Visitas con cita previa.</p>
+        <p class="foot__tel">Teléfono: ${phoneLinks()}</p>
       </div>
       <div class="foot__col"><h3>Servicios</h3><ul>
         <li><a href="/tasacion-antiguedades-madrid/">Tasación de antigüedades</a></li>
@@ -108,6 +112,7 @@ export function tallyForm({ title = "Solicite su tasación gratuita", lead } = {
         <li>Visita a domicilio en Madrid y desplazamiento a toda España</li>
         <li>Confidencialidad absoluta sobre la pieza y su propietario</li>
       </ul>
+      <p class="form__tel">También puede llamarnos: ${phoneLinks()}</p>
     </div>
     <div class="form__frame">${frame}</div>
   </div>

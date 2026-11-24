@@ -1,5 +1,5 @@
 import { P, FAQ, crumb } from "./shared.mjs";
-import { SITE, LEGAL } from "../config.mjs";
+import { SITE, LEGAL, PHONES, phoneText, phoneHref } from "../config.mjs";
 
 const faqAll = [
   { q: "¿La tasación es realmente gratuita?", a: FAQ.gratis.a },
@@ -92,6 +92,7 @@ export default [
     {
       t: "facts", h2: "Cómo contactar",
       items: [
+        { h3: "Por teléfono", p: `Llame al <a href="${phoneHref(PHONES[0])}">${phoneText(PHONES[0])}</a> o al <a href="${phoneHref(PHONES[1])}">${phoneText(PHONES[1])}</a> y le atendemos en la galería.` },
         { h3: "Con fotografías", p: "Use el formulario y adjunte imágenes de la pieza, sus medidas y lo que sepa de su origen." },
         { h3: "Visita a la galería", p: `Nos encontramos en el ${SITE.district}, en ${SITE.locality}. Recibimos con cita previa.` },
         { h3: "Fuera de Madrid", p: "Valoramos por fotografías y nos desplazamos a su domicilio en toda España cuando la pieza lo justifica." },

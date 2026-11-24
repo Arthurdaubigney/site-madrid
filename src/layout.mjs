@@ -1,4 +1,4 @@
-import { SITE, CTA } from "./config.mjs";
+import { SITE, CTA, PHONES } from "./config.mjs";
 import { esc, header, footer, tallyForm, renderBlock, breadcrumbs, button, arrow } from "./components.mjs";
 import { pic, imageInfo, ratioStyle, fitFor } from "./images.mjs";
 
@@ -25,6 +25,8 @@ export const businessNode = (page) => ({
     addressRegion: SITE.region,
     addressCountry: SITE.country,
   },
+  telephone: `+34${PHONES[0]}`,
+  contactPoint: PHONES.map((n) => ({ "@type": "ContactPoint", telephone: `+34${n}`, contactType: "atención al cliente", areaServed: "ES", availableLanguage: ["es"] })),
   areaServed,
   knowsAbout: ["Antigüedades", "Tasación de arte", "Mobiliario antiguo", "Pintura antigua", "Plata antigua", "Bronces y esculturas", "Porcelana antigua", "Relojes antiguos"],
   openingHours: undefined,
