@@ -18,6 +18,19 @@
     matchMedia("(min-width:1024px)").addEventListener("change", (m) => m.matches && set(false));
   }
 
+  // Barra de acciones móvil: se oculta mientras el formulario o el menú están a la vista
+  const bar = $(".actionbar");
+  if (bar && "IntersectionObserver" in window) {
+    // Se oculta mientras el botón del hero o el formulario están en pantalla: nunca dos veces la misma acción.
+    const seen = new Map();
+    const io = new IntersectionObserver((es) => {
+      es.forEach((e) => seen.set(e.target, e.isIntersecting));
+      bar.classList.toggle("is-hidden", [...seen.values()].some(Boolean));
+    }, { threshold: 0.15 });
+    [$(".hero .actions"), $("#formulario")].filter(Boolean).forEach((el) => io.observe(el));
+  }
+  if (bar && toggle) toggle.addEventListener("click", () => bar.classList.toggle("is-hidden", toggle.getAttribute("aria-expanded") === "true"));
+
   // Preguntas frecuentes
   $$(".acc__btn").forEach((btn) => {
     const panel = document.getElementById(btn.getAttribute("aria-controls"));

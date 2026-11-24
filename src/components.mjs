@@ -16,6 +16,14 @@ export function textLink(label, href) {
   return `<a class="link" href="${href}">${esc(label)}${arrow}</a>`;
 }
 
+/** Barra fija inferior en móvil: llamar o pedir tasación con un toque. */
+export function actionBar(formHref) {
+  return `<nav class="actionbar" aria-label="Acciones rápidas">
+  <a class="btn btn--secondary" href="${phoneHref(PHONES[0])}">Llamar</a>
+  <a class="btn btn--primary" href="${formHref}">Solicitar tasación</a>
+</nav>`;
+}
+
 export const phoneLinks = (cls = "phones") => `<span class="${cls}">${PHONES.map((n) => `<a href="${phoneHref(n)}" aria-label="Llamar al ${phoneText(n)}">${phoneText(n)}</a>`).join('<span aria-hidden="true"> · </span>')}</span>`;
 
 // ── Cabecera ───────────────────────────────────────────────────────────────
@@ -33,6 +41,7 @@ export function header(current, formHref) {
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <a class="brand" href="/" aria-label="${esc(SITE.brand)}, inicio">${mark}<span class="brand__name">${esc(SITE.brand)}</span></a>
     <nav class="nav__main" aria-label="Principal"><ul>${items}</ul></nav>
+    <a class="nav__tel" href="${phoneHref(PHONES[0])}" aria-label="Llamar al ${phoneText(PHONES[0])}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>${phoneText(PHONES[0])}</span></a>
     <a class="btn btn--primary nav__cta" href="${formHref}">${esc(CTA)}</a>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir el menú"><span></span><span></span></button>
   </div>
@@ -54,7 +63,7 @@ export function footer() {
       <div class="foot__brand">
         <a class="brand brand--foot" href="/" aria-label="${esc(SITE.brand)}, inicio">${mark}<span class="brand__name">${esc(SITE.brand)}</span></a>
         <p>Galería de antigüedades y gabinete de tasación en ${SITE.locality}. Tasación pericial, compra directa y gestión de herencias con discreción.</p>
-        <p class="foot__place">${esc(SITE.district)}, ${SITE.locality}. Visitas con cita previa.</p>
+        <p class="foot__place">${SITE.locality}. Visitas con cita previa.</p>
         <p class="foot__tel">Teléfono: ${phoneLinks()}</p>
       </div>
       <div class="foot__col"><h3>Servicios</h3><ul>
@@ -65,7 +74,6 @@ export function footer() {
       </ul></div>
       <div class="foot__col"><h3>Qué compramos</h3><ul>${cats}</ul></div>
       <div class="foot__col"><h3>Dónde trabajamos</h3><ul>
-        <li><a href="/tasacion-antiguedades-barrio-de-salamanca/">Barrio de Salamanca</a></li>
         <li><a href="/tasacion-antiguedades-comunidad-de-madrid/">Comunidad de Madrid</a></li>
         <li><a href="/tasacion-antiguedades-toda-espana/">Toda España</a></li>
         <li><a href="/la-galeria/">La galería</a></li>
@@ -186,7 +194,7 @@ const blocks = {
   },
 
   faq(b) {
-    const items = b.items.map((f, i) => `<div class="acc"><h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-${b.key || "f"}-${i}" id="faq-${b.key || "f"}-b${i}"><span>${f.q}</span><svg class="acc__chev" width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true"><path d="m1 1 6 6 6-6" stroke="currentColor" stroke-width="1.4"/></svg></button></h3><div class="acc__panel" id="faq-${b.key || "f"}-${i}" role="region" aria-labelledby="faq-${b.key || "f"}-b${i}"><div class="acc__inner"><p>${f.a}</p></div></div></div>`).join("");
+    const items = b.items.map((f, i) => `<div class="acc"><h3><button class="acc__btn" type="button" aria-expanded="${i === 0}" aria-controls="faq-${b.key || "f"}-${i}" id="faq-${b.key || "f"}-b${i}"><span>${f.q}</span><svg class="acc__chev" width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true"><path d="m1 1 6 6 6-6" stroke="currentColor" stroke-width="1.4"/></svg></button></h3><div class="acc__panel${i === 0 ? " is-open" : ""}" id="faq-${b.key || "f"}-${i}" role="region" aria-labelledby="faq-${b.key || "f"}-b${i}"><div class="acc__inner"><p>${f.a}</p></div></div></div>`).join("");
     return `${secOpen(b)}<div class="wrap grid faq"><div class="faq__head"><h2>${b.h2}</h2>${b.intro ? `<p class="lead">${b.intro}</p>` : ""}${b.more ? `<p class="actions">${textLink(b.more[0], b.more[1])}</p>` : ""}</div><div class="faq__list">${items}</div></div></section>`;
   },
 };

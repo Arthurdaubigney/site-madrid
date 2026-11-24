@@ -6,7 +6,6 @@ export const P = {
   tasacion: "/tasacion-antiguedades-madrid/",
   compra: "/compra-antiguedades-madrid/",
   herencias: "/tasacion-herencias-madrid/",
-  salamanca: "/tasacion-antiguedades-barrio-de-salamanca/",
   comunidad: "/tasacion-antiguedades-comunidad-de-madrid/",
   espana: "/tasacion-antiguedades-toda-espana/",
   galeria: "/la-galeria/",

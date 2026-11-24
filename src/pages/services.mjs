@@ -55,7 +55,7 @@ export default [
       items: [
         { label: "Compra de antigüedades", p: "Si después de la tasación quiere vender, le hacemos una oferta.", href: P.compra },
         { label: "Tasación de herencias", p: "Inventario y valoración de los bienes artísticos de una testamentaría.", href: P.herencias },
-        { label: "Tasación en el Barrio de Salamanca", p: "Visitas a domicilio en el barrio donde tiene su sede la galería.", href: P.salamanca },
+        { label: "Tasación en la Comunidad de Madrid", p: "Visitas a domicilio en Madrid capital y en toda la región.", href: P.comunidad },
       ],
     },
   ],

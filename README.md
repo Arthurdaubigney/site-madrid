@@ -1,6 +1,6 @@
 # Galería Anticuaria Aldaba — sitio web
 
-Sitio institucional estático para una galería de antigüedades y gabinete de tasación en Madrid (Barrio de Salamanca).
+Sitio institucional estático para una galería de antigüedades y gabinete de tasación en Madrid.
 HTML semántico, sin frameworks en el cliente, CSS incrustado, ~2,7 KiB de JS y tipografías autoalojadas.
 
 ## Uso
@@ -45,7 +45,7 @@ tools/                    fetch-images.py, og-images.py, preview.mjs
 - Un solo `<h1>` por página, jerarquía `h2`/`h3` estricta, `<title>` de 54–61 caracteres y `meta description` de ~145–155.
 - JSON-LD: `AntiqueStore`/`LocalBusiness`/`ProfessionalService` (Madrid), `WebSite`, `WebPage`/`AboutPage`/`ContactPage`/`FAQPage`, `Service` y `BreadcrumbList`.
 - Cada imagen lleva `alt` y `title` descriptivos, `width`/`height`, `srcset` y carga diferida (salvo la imagen principal, precargada).
-- Páginas locales: Barrio de Salamanca, Comunidad de Madrid, toda España; seis especialidades; herencias; FAQ.
+- Páginas locales: Comunidad de Madrid, toda España; seis especialidades; herencias; FAQ.
 
 ## Fotografías
 

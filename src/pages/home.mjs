@@ -7,7 +7,7 @@ export default [{
   ogImage: "salon-tesse",
   crumbs: [],
   hero: {
-    eyebrow: "Galería y gabinete de tasación · Barrio de Salamanca",
+    eyebrow: "Galería de antigüedades y gabinete de tasación en Madrid",
     h1: "Galería de antigüedades en Madrid: <em>tasación, peritaje y compra</em> de obras de arte",
     lead: "Valoramos y compramos mobiliario antiguo, pintura clásica, plata, bronces y piezas de colección. Visitamos su domicilio en Madrid sin coste y nos desplazamos a toda España, con total discreción.",
     img: "salon-tesse",
@@ -69,9 +69,8 @@ export default [{
     {
       t: "links", alt: true, id: "zonas",
       h2: "Dónde <em>trabajamos</em>",
-      intro: "Con sede en el Barrio de Salamanca, visitamos viviendas de toda la Comunidad de Madrid y de España.",
+      intro: "Con sede en Madrid, visitamos viviendas de toda la Comunidad de Madrid y de España.",
       items: [
-        { label: "Barrio de Salamanca", p: "Valoración a domicilio en el barrio donde tiene su sede la galería.", href: P.salamanca },
         { label: "Comunidad de Madrid", p: "Pozuelo, La Moraleja, Las Rozas, Majadahonda, Boadilla y el resto de la región.", href: P.comunidad },
         { label: "Toda España", p: "Valoración por fotografías y desplazamiento para piezas y colecciones.", href: P.espana },
       ],

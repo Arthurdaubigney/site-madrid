@@ -8,7 +8,6 @@ export const SITE = {
   url: (process.env.SITE_URL || "https://galeria-aldaba.example").replace(/\/$/, ""),
   lang: "es-ES",
   locality: "Madrid",
-  district: "Barrio de Salamanca",
   region: "Comunidad de Madrid",
   country: "ES",
   // Correo de reserva que usa el módulo de contacto mientras no haya formulario Tally.

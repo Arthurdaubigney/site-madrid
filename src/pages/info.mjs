@@ -17,14 +17,14 @@ const faqAll = [
 export default [
 {
   path: P.galeria,
-  title: "La galería | Anticuario y tasador en el Barrio de Salamanca",
-  description: "Conozca la Galería Anticuaria Aldaba: anticuario y gabinete de tasación en el Barrio de Salamanca de Madrid. Peritaje riguroso, trato directo y discreción.",
+  title: "La galería | Anticuario y tasador en Madrid | Aldaba",
+  description: "Conozca la Galería Anticuaria Aldaba: anticuario y gabinete de tasación en Madrid. Peritaje riguroso, examen en persona, trato directo y discreción.",
   schema: "about",
   crumbs: crumb(["La galería", P.galeria]),
   hero: {
     eyebrow: "La galería",
     h1: "Galería anticuaria y gabinete de tasación en Madrid",
-    lead: "Somos una galería de antigüedades con sede en el Barrio de Salamanca. Tasamos, compramos y asesoramos con un criterio: examinar cada pieza en persona y hablar con claridad.",
+    lead: "Somos una galería de antigüedades con sede en Madrid. Tasamos, compramos y asesoramos con un criterio: examinar cada pieza en persona y hablar con claridad.",
     img: "salon-tesse", ratio: "portrait",
   },
   blocks: [
@@ -94,7 +94,7 @@ export default [
       items: [
         { h3: "Por teléfono", p: `Llame al <a href="${phoneHref(PHONES[0])}">${phoneText(PHONES[0])}</a> o al <a href="${phoneHref(PHONES[1])}">${phoneText(PHONES[1])}</a> y le atendemos en la galería.` },
         { h3: "Con fotografías", p: "Use el formulario y adjunte imágenes de la pieza, sus medidas y lo que sepa de su origen." },
-        { h3: "Visita a la galería", p: `Nos encontramos en el ${SITE.district}, en ${SITE.locality}. Recibimos con cita previa.` },
+        { h3: "Visita a la galería", p: `Nos encontramos en ${SITE.locality}. Recibimos con cita previa.` },
         { h3: "Fuera de Madrid", p: "Valoramos por fotografías y nos desplazamos a su domicilio en toda España cuando la pieza lo justifica." },
       ],
     },
@@ -104,7 +104,7 @@ export default [
 {
   path: "/aviso-legal/",
   title: "Aviso legal y condiciones de uso | Galería Anticuaria Aldaba",
-  description: "Aviso legal de la Galería Anticuaria Aldaba en Madrid: titular, condiciones de uso, propiedad intelectual y legislación aplicable.",
+  description: "Aviso legal de la Galería Anticuaria Aldaba en Madrid: titular, condiciones de uso, propiedad intelectual, responsabilidad y legislación aplicable.",
   noindex: false, form: false, bare: true,
   crumbs: crumb(["Aviso legal", "/aviso-legal/"]),
   hero: { img: "salon-tesse" },
@@ -112,7 +112,7 @@ export default [
     {
       t: "doc", h1: "Aviso legal",
       sections: [
-        ["Titular del sitio web", `<p>Este sitio web pertenece a la ${SITE.brand}, galería de antigüedades y gabinete de tasación con sede en ${SITE.district}, ${SITE.locality}.</p>${LEGAL.razonSocial ? `<p>Razón social: ${LEGAL.razonSocial}. NIF: ${LEGAL.nif}. Domicilio: ${LEGAL.domicilio}.</p>` : ""}<p>Para cualquier consulta puede utilizar el <a href="/contacto/#formulario">formulario de contacto</a>.</p>`],
+        ["Titular del sitio web", `<p>Este sitio web pertenece a la ${SITE.brand}, galería de antigüedades y gabinete de tasación con sede en ${SITE.locality}.</p>${LEGAL.razonSocial ? `<p>Razón social: ${LEGAL.razonSocial}. NIF: ${LEGAL.nif}. Domicilio: ${LEGAL.domicilio}.</p>` : ""}<p>Para cualquier consulta puede utilizar el <a href="/contacto/#formulario">formulario de contacto</a>.</p>`],
         ["Condiciones de uso", "<p>El acceso y el uso de este sitio web atribuyen la condición de usuario e implican la aceptación de este aviso. La información publicada tiene carácter informativo y no constituye una oferta vinculante ni una tasación. Las valoraciones se emiten tras el estudio de cada pieza.</p>"],
         ["Propiedad intelectual", "<p>Los textos y el diseño de este sitio pertenecen a la galería. Las fotografías proceden de la colección de acceso abierto del Metropolitan Museum of Art (licencia CC0). Queda prohibida la reproducción de los contenidos propios sin autorización.</p>"],
         ["Responsabilidad", "<p>La galería procura que la información sea exacta y actual, pero no responde de los errores u omisiones que pudieran existir ni del uso que se haga de ella. Los enlaces a sitios de terceros, como el servicio de formularios, se rigen por sus propias condiciones.</p>"],
@@ -132,7 +132,7 @@ export default [
     {
       t: "doc", h1: "Política de privacidad",
       sections: [
-        ["Responsable del tratamiento", `<p>${SITE.brand}, con sede en ${SITE.district}, ${SITE.locality}. Puede contactar a través del <a href="/contacto/#formulario">formulario de contacto</a>.</p>`],
+        ["Responsable del tratamiento", `<p>${SITE.brand}, con sede en ${SITE.locality}. Puede contactar a través del <a href="/contacto/#formulario">formulario de contacto</a>.</p>`],
         ["Qué datos tratamos y para qué", "<p>Cuando solicita una tasación o nos escribe, tratamos los datos que usted facilita (nombre, medio de contacto, descripción y fotografías de la pieza) para responder a su solicitud, valorar la pieza y, en su caso, formular una oferta de compra.</p>"],
         ["Base jurídica y conservación", "<p>La base jurídica es su consentimiento y la aplicación de medidas precontractuales a su petición. Conservamos los datos el tiempo necesario para atender su solicitud y durante los plazos legales aplicables.</p>"],
         ["Servicio de formularios", "<p>El formulario de contacto se presta a través de Tally, que actúa como encargado del tratamiento. Los datos que usted introduce se transmiten a ese servicio para que nos lleguen. Consulte su política de privacidad para más información.</p>"],

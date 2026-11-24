@@ -354,3 +354,24 @@ a.card:hover{border-color:var(--gold)}
 .ticks li::before{border-color:var(--gold)}
 .hero__facts li::before{border-color:var(--gold)}
 .foot{border-top:0}
+
+/* ── UX: teléfono en cabecera, barra de acciones móvil, foco y lectura ── */
+.nav__tel{display:none;align-items:center;gap:8px;font-size:15px;font-weight:500;text-decoration:none;white-space:nowrap;padding:10px 4px;border-radius:var(--r);transition:color var(--d-fast) var(--ease)}
+.nav__tel svg{color:var(--accent)}
+.nav__tel:hover{color:var(--accent)}
+@media (min-width:1200px){.nav__tel{display:inline-flex}.nav__main{margin-left:auto}.nav__bar{gap:var(--s5)}}
+
+.actionbar{display:none}
+@media (max-width:639px){
+  .actionbar{display:grid;grid-template-columns:1fr 1.5fr;gap:12px;position:fixed;left:0;right:0;bottom:0;z-index:15;padding:12px var(--gut) calc(12px + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid rgba(168,120,42,.4);transform:translateY(0);transition:transform var(--d-medium) var(--ease)}
+  .actionbar .btn{min-height:48px;padding:0 12px;width:100%}
+  .actionbar.is-hidden{transform:translateY(110%);visibility:hidden;transition:transform var(--d-medium) var(--ease),visibility 0s linear var(--d-medium)}
+  body{padding-bottom:0}
+  .foot{padding-bottom:calc(var(--s6) + 72px)}
+  .nav__cta{display:none}
+}
+/* Texto largo más cómodo de leer */
+.split__text p,.prose p,.card__body p,.fact p,.step p{line-height:1.7}
+/* Zonas táctiles */
+.crumbs a{display:inline-block;padding:8px 0}
+.foot__col a{display:inline-block;padding:6px 0}

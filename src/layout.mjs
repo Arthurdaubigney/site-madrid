@@ -1,5 +1,5 @@
 import { SITE, CTA, PHONES } from "./config.mjs";
-import { esc, header, footer, tallyForm, renderBlock, breadcrumbs, button, arrow } from "./components.mjs";
+import { esc, header, footer, actionBar, tallyForm, renderBlock, breadcrumbs, button, arrow } from "./components.mjs";
 import { pic, imageInfo, ratioStyle, fitFor, frameRatio } from "./images.mjs";
 
 const abs = (p) => `${SITE.url}${p}`;
@@ -122,6 +122,7 @@ ${header(page.path, page.formHref)}
 ${main}
 </main>
 ${footer()}
+${actionBar(page.formHref)}
 <script src="${js}" defer></script>
 </body>
 </html>
