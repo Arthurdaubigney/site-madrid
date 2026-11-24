@@ -137,7 +137,7 @@ const blocks = {
   cards(b) {
     const cols = b.cols || 3;
     const items = b.items.map((i) => {
-      const inner = `<div class="card__media" style="${ratioStyle(i.img, 0.75, 1.4)}">${pic(i.img, { sizes: `(min-width:1024px) ${Math.round(100 / cols)}vw, 100vw`, fit: fitFor(i.img, 0.75, 1.4) })}</div>
+      const inner = `<div class="card__media frame--${b.cardRatio || "land"}">${pic(i.img, { sizes: `(min-width:1024px) ${Math.round(100 / cols)}vw, 100vw`, fit: "cover" })}</div>
         <div class="card__body"><h3>${i.h3}</h3><p>${i.p}</p>${i.href ? `<span class="link">${esc(i.cta || "Ver más")}${arrow}</span>` : ""}</div>`;
       return i.href ? `<a class="card" href="${i.href}">${inner}</a>` : `<div class="card">${inner}</div>`;
     }).join("");

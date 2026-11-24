@@ -87,15 +87,15 @@ export default [
       img: "busto-canova",
     },
     {
-      t: "cards", alt: true, cols: 3, id: "especialidades",
+      t: "cards", alt: true, cols: 3, cardRatio: "square", id: "especialidades",
       h2: "Especialidades que compramos",
       items: [
         { h3: "Muebles antiguos", p: "Cómodas, consolas, secreteres, sillería y mesas de época.", img: "comoda-laca", ratio: "portrait", href: P.muebles, cta: "Ver muebles" },
         { h3: "Pintura antigua", p: "Óleos, tablas y cobres de escuelas europeas.", img: "paisaje-koch", ratio: "portrait", href: P.pintura, cta: "Ver pintura" },
         { h3: "Plata antigua", p: "Platería civil y de mesa con marcas de contraste.", img: "sopera-lamerie", ratio: "portrait", href: P.plata, cta: "Ver plata" },
-        { h3: "Bronces y esculturas", p: "Bronces, mármoles y terracotas de taller o de autor.", img: "bronce-termino", ratio: "portrait", href: P.bronces, cta: "Ver esculturas" },
+        { h3: "Bronces y esculturas", p: "Bronces, mármoles y terracotas de taller o de autor.", img: "bronce-hercules", ratio: "portrait", href: P.bronces, cta: "Ver esculturas" },
         { h3: "Porcelana y cerámica", p: "Manufacturas europeas y de Compañía de Indias.", img: "sevres-bastones", ratio: "portrait", href: P.porcelana, cta: "Ver porcelana" },
-        { h3: "Relojes y objetos de arte", p: "Pendulas, tabaqueras, cofres, esmaltes y miniaturas.", img: "reloj-pons", ratio: "portrait", href: P.relojes, cta: "Ver objetos" },
+        { h3: "Relojes y objetos de arte", p: "Pendulas, tabaqueras, cofres, esmaltes y miniaturas.", img: "estuche-te", ratio: "portrait", href: P.relojes, cta: "Ver objetos" },
       ],
     },
     {
