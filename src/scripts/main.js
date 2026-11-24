@@ -53,6 +53,13 @@
       s.onerror = direct;
       document.body.appendChild(s);
     };
+    // Seguridad: si Tally no llega a ajustar la altura, el formulario sigue siendo utilizable con su propio desplazamiento.
+    frames.forEach((f) => f.addEventListener("load", () => setTimeout(() => {
+      if (f.offsetHeight === Number(f.getAttribute("height"))) {
+        f.setAttribute("scrolling", "yes");
+        f.style.height = "min(90vh, 900px)";
+      }
+    }, 5000)));
     if ("IntersectionObserver" in window) {
       const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { start(); io.disconnect(); } }, { rootMargin: "400px" });
       frames.forEach((f) => io.observe(f));

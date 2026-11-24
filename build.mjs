@@ -1,6 +1,7 @@
 // Generador del sitio estático: ensambla páginas, estilos, scripts, sitemap y robots en dist/.
 import { mkdirSync, rmSync, writeFileSync, readFileSync, cpSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
+import { createHash } from "node:crypto";
 import { SITE, TALLY_FORM_ID } from "./src/config.mjs";
 import { renderPage } from "./src/layout.mjs";
 import home from "./src/pages/home.mjs";
@@ -27,7 +28,10 @@ const css = readFileSync(join(root, "src/styles/main.css"), "utf8")
 
 mkdirSync(join(dist, "assets"), { recursive: true });
 const js = readFileSync(join(root, "src/scripts/main.js"), "utf8");
-writeFileSync(join(dist, "assets/main.js"), js);
+// El nombre del script lleva su huella: cada versión tiene una URL nueva y ningún navegador conserva una antigua.
+const jsHash = createHash("sha1").update(js).digest("hex").slice(0, 8);
+const jsPath = `/assets/main.${jsHash}.js`;
+writeFileSync(join(dist, jsPath), js);
 
 const write = (rel, content) => {
   const f = join(dist, rel);
@@ -38,7 +42,7 @@ const write = (rel, content) => {
 const problems = [];
 for (const p of pages) {
   const rel = p.path === "/" ? "index.html" : join(p.path, "index.html");
-  write(rel, renderPage(p, css, "/assets/main.js"));
+  write(rel, renderPage(p, css, jsPath));
   const t = p.title.length, d = p.description.length;
   if (t < 50 || t > 62) problems.push(`título ${t} car.: ${p.path}`);
   if (d < 140 || d > 158) problems.push(`descripción ${d} car.: ${p.path}`);
@@ -49,7 +53,7 @@ write("404.html", renderPage({
   path: "/404.html", title: "Página no encontrada | Galería Anticuaria Aldaba", description: "La página que busca no existe. Vuelva al inicio de la Galería Anticuaria Aldaba, anticuario y tasador en Madrid.",
   noindex: true, form: false, bare: true, crumbs: [], hero: { img: "salon-tesse" },
   blocks: [{ t: "doc", h1: "Página no encontrada", sections: [["Esta dirección no existe", '<p>Puede que el enlace haya cambiado. Vuelva al <a href="/">inicio</a> o <a href="/contacto/#formulario">solicite una tasación gratuita</a>.</p>']] }],
-}, css, "/assets/main.js"));
+}, css, jsPath));
 
 // sitemap + robots + favicon
 const urls = pages.map((p) => `<url><loc>${SITE.url}${p.path}</loc><changefreq>monthly</changefreq><priority>${p.path === "/" ? "1.0" : p.path.split("/").length > 4 ? "0.6" : "0.8"}</priority></url>`).join("");
