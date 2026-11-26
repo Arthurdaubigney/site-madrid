@@ -20,7 +20,7 @@ npm run preview      # sirve dist/ en http://localhost:4173
 | **ID del formulario Tally** (la parte final de `https://tally.so/r/XXXXXX`) | `TALLY_FORM_ID` en `src/config.mjs`, o `TALLY_FORM_ID=XXXXXX npm run build` |
 | **Dominio definitivo** (canonical, sitemap, Schema.org, Open Graph) | `SITE_URL=https://www.midominio.es npm run build` o `SITE.url` en `src/config.mjs` |
 | Correo de contacto de reserva (hasta que exista Tally) | `SITE.email` en `src/config.mjs` |
-| Datos legales (razón social, NIF, domicilio) para el Aviso legal | `LEGAL` en `src/config.mjs` |
+| Datos legales (razón social, NIF; el domicilio ya figura: Calle de Limonero, 22, Madrid) para el Aviso legal | `LEGAL` en `src/config.mjs` |
 | Nombre de marca | `SITE.brand` / `SITE.short` (marca provisional «Aldaba»: verifique disponibilidad) |
 
 El formulario Tally (`https://tally.so/r/PRzLpb`) ya está configurado en `TALLY_FORM_ID`. Si se vaciara, el módulo mostraría una tarjeta de contacto por correo.

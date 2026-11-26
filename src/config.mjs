@@ -25,7 +25,7 @@ export const TALLY_FORM_ID = process.env.TALLY_FORM_ID || "PRzLpb";
 export const LEGAL = {
   razonSocial: "",
   nif: "",
-  domicilio: "",
+  domicilio: "Calle de Limonero, 22, Madrid",
 };
 
 export const NAV = [
