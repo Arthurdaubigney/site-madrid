@@ -21,11 +21,17 @@ export const SITE = {
 export const TALLY_FORM_ID = process.env.TALLY_FORM_ID || "PRzLpb";
 
 // ── Datos legales (Aviso legal, LSSI) ──────────────────────────────────────
-// Rellene estos campos y aparecerán en /aviso-legal/. Vacíos, no se muestran.
+// Estos datos aparecen ÚNICAMENTE en /aviso-legal/ (el correo, en ningún otro sitio de la web).
+// Los campos vacíos no se muestran. Datos del titular tomados del registro de empresas francés.
 export const LEGAL = {
-  razonSocial: "",
-  nif: "",
+  titular: "François Secula",
+  forma: "empresario individual (entrepreneur individuel)",
+  siren: "529 601 486",
+  siret: "529 601 486 00010",
+  iva: "FR51529601486",
+  sede: "21 rue du Docteur Tassin, 21200 Beaune (Francia)",
   domicilio: "Calle de Limonero, 22, Madrid",
+  email: "francoisseculapub@gmail.com",
 };
 
 export const NAV = [

@@ -397,3 +397,5 @@ a.card:hover{border-color:var(--gold)}
 .credits{display:grid;gap:var(--s3);margin-top:var(--s4);font-size:15px;color:var(--muted)}
 .credits a{color:var(--ink);text-underline-offset:3px}
 .foot__credit{text-decoration:none}
+.legal-data{display:grid;gap:var(--s2);margin:0 0 var(--s4)}
+.legal-data a{overflow-wrap:anywhere}
