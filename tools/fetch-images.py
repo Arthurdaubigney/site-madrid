@@ -62,6 +62,17 @@ IMAGES = [
  ("estuche-te", 203643, "Estuche de té esmaltado sobre cobre con decoración pintada, hacia 1768", 0),
  ("cofre-esmalte", 203293, "Cofre de esmalte pintado sobre cobre con metal dorado, hacia 1770", 0),
  ("cofre-genesis", 206832, "Cofre de esmalte pintado con escenas del Génesis, de Suzanne de Court, siglo XVII", 0),
+ # Pieles y complementos
+ ("piel-capa-negra", 107121, "Capa corta de piel oscura con forro, hacia 1892", 0),
+ ("piel-capa-rojiza", 107271, "Capa larga de piel de tono rojizo, entre 1850 y 1900", 0),
+ ("piel-manguito-negro", 104701, "Manguito de piel negra de finales de la década de 1880", 0),
+ ("piel-manguito-marron", 169735, "Manguito de piel marrón con cordón, hacia 1885", 0),
+ # Joyería (perlas, esmaltes y coral)
+ ("joya-colgante-coral", 468367, "Colgante de hacia 1500 con coral tallado, serpiente y perlas barrocas", 0),
+ ("joya-colgante-loro", 207266, "Colgante renacentista en forma de loro con perla barroca", 0),
+ ("joya-colgante-gato", 207267, "Colgante renacentista en forma de gato sentado con perla barroca", 0),
+ ("joya-colgante-perlas", 197141, "Colgante del siglo XVII con perlas y esmalte", 0),
+ ("joya-collar-perlas", 17575, "Collar de perlas con motivos florales, hacia 1850", 0),
 ]
 
 def get(url):
@@ -84,8 +95,12 @@ def trim_black(im):
 
 def main():
     os.makedirs(OUT, exist_ok=True)
-    manifest = {}
+    only = set(sys.argv[1:])  # opcional: procesar solo estos slugs y conservar el resto del manifiesto
+    mpath = os.path.join(ROOT, "src", "data", "images.json")
+    manifest = json.load(open(mpath, encoding="utf-8")) if only and os.path.exists(mpath) else {}
     for slug, oid, alt, trim in IMAGES:
+        if only and slug not in only:
+            continue
         meta = json.loads(get(API + str(oid)))
         assert meta.get("isPublicDomain"), slug
         src = meta["primaryImage"]

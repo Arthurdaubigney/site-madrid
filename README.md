@@ -7,7 +7,7 @@ HTML semántico, sin frameworks en el cliente, CSS incrustado, ~2,7 KiB de JS y 
 
 ```bash
 npm install          # solo las tipografías (fuentes de desarrollo)
-npm run build        # genera dist/ (18 páginas + 404, sitemap.xml, robots.txt)
+npm run build        # genera dist/ (20 páginas + créditos y 404, sitemap.xml, robots.txt)
 npm run preview      # sirve dist/ en http://localhost:4173
 ```
 
@@ -45,9 +45,9 @@ tools/                    fetch-images.py, og-images.py, preview.mjs
 - Un solo `<h1>` por página, jerarquía `h2`/`h3` estricta, `<title>` de 54–61 caracteres y `meta description` de ~145–155.
 - JSON-LD: `AntiqueStore`/`LocalBusiness`/`ProfessionalService` (Madrid), `WebSite`, `WebPage`/`AboutPage`/`ContactPage`/`FAQPage`, `Service` y `BreadcrumbList`.
 - Cada imagen lleva `alt` y `title` descriptivos, `width`/`height`, `srcset` y carga diferida (salvo la imagen principal, precargada).
-- Páginas locales: Comunidad de Madrid, toda España; seis especialidades; herencias; FAQ.
+- Páginas locales: Comunidad de Madrid, toda España; nueve especialidades (muebles y vargueños, pintura, plata, bronces, porcelana, relojes españoles, joyería española, monedas españolas, pieles); herencias con vaciado de vivienda; FAQ.
 
 ## Fotografías
 
-Las fotografías proceden de la colección de acceso abierto del Metropolitan Museum of Art (dominio público, CC0), descargadas y optimizadas con `npm run images`; después `python3 tools/image-meta.py` calcula el color de fondo de cada foto y `python3 tools/og-images.py` genera las vistas previas sociales. Todas se muestran enteras (sin recortar la pieza).
+Las fotografías proceden de la colección de acceso abierto del Metropolitan Museum of Art (dominio público, CC0) y de Wikimedia Commons (autores y licencias en `/creditos-fotograficos/`; `tools/import-commons.py`), descargadas y optimizadas con `npm run images`; después `python3 tools/image-meta.py` calcula el color de fondo de cada foto y `python3 tools/og-images.py` genera las vistas previas sociales. Todas se muestran enteras (sin recortar la pieza).
 Son piezas de museo que sirven de ilustración: **sustitúyalas por fotografías propias de la galería** antes de presentar el sitio como inventario real.

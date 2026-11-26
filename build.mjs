@@ -7,12 +7,13 @@ import { renderPage } from "./src/layout.mjs";
 import home from "./src/pages/home.mjs";
 import services from "./src/pages/services.mjs";
 import categories from "./src/pages/categories.mjs";
+import categoriesExtra from "./src/pages/categories-extra.mjs";
 import zones from "./src/pages/zones.mjs";
 import info from "./src/pages/info.mjs";
 
 const root = dirname(new URL(import.meta.url).pathname);
 const dist = join(root, "dist");
-const pages = [...home, ...services, ...categories, ...zones, ...info];
+const pages = [...home, ...services, ...categories, ...categoriesExtra, ...zones, ...info];
 
 rmSync(dist, { recursive: true, force: true });
 mkdirSync(dist, { recursive: true });

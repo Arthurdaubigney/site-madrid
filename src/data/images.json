@@ -643,5 +643,487 @@
   "met": 206832,
   "bgt": "#4f504d",
   "bgb": "#f6f6f4"
+ },
+ "piel-capa-negra": {
+  "alt": "Capa corta de piel oscura con forro, hacia 1892",
+  "w": 2488,
+  "h": 2982,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 107121,
+  "bgt": "#e7e0d4",
+  "bgb": "#efe8dd"
+ },
+ "piel-capa-rojiza": {
+  "alt": "Capa larga de piel de tono rojizo, entre 1850 y 1900",
+  "w": 1456,
+  "h": 1792,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "met": 107271,
+  "bgt": "#c8c3bd",
+  "bgb": "#afa79e"
+ },
+ "piel-manguito-negro": {
+  "alt": "Manguito de piel negra de finales de la década de 1880",
+  "w": 728,
+  "h": 581,
+  "widths": [
+   480
+  ],
+  "met": 104701,
+  "bgt": "#f9f9f7",
+  "bgb": "#f0eeee"
+ },
+ "piel-manguito-marron": {
+  "alt": "Manguito de piel marrón con cordón, hacia 1885",
+  "w": 2000,
+  "h": 1297,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 169735,
+  "bgt": "#bdbec7",
+  "bgb": "#cac6ce"
+ },
+ "joya-colgante-coral": {
+  "alt": "Colgante de hacia 1500 con coral tallado, serpiente y perlas barrocas",
+  "w": 1596,
+  "h": 2395,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "met": 468367,
+  "bgt": "#e3e3e2",
+  "bgb": "#d4d5d5"
+ },
+ "joya-colgante-loro": {
+  "alt": "Colgante renacentista en forma de loro con perla barroca",
+  "w": 1488,
+  "h": 1861,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "met": 207266,
+  "bgt": "#803e42",
+  "bgb": "#783637"
+ },
+ "joya-colgante-gato": {
+  "alt": "Colgante renacentista en forma de gato sentado con perla barroca",
+  "w": 2804,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 207267,
+  "bgt": "#757575",
+  "bgb": "#ababab"
+ },
+ "joya-colgante-perlas": {
+  "alt": "Colgante del siglo XVII con perlas y esmalte",
+  "w": 3447,
+  "h": 4000,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 197141,
+  "bgt": "#949494",
+  "bgb": "#b5b5b5"
+ },
+ "joya-collar-perlas": {
+  "alt": "Collar de perlas con motivos florales, hacia 1850",
+  "w": 3791,
+  "h": 3791,
+  "widths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "met": 17575,
+  "bgt": "#908d8e",
+  "bgb": "#908d8e"
+ },
+ "vargueno-taquillon": {
+  "alt": "Vargueño español del siglo XVII sobre taquillón, de nogal con herrajes de hierro forjado e incrustaciones de hueso",
+  "w": 960,
+  "h": 1280,
+  "widths": [
+   480,
+   800
+  ],
+  "credit": {
+   "by": "Daderot",
+   "licence": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Vargue%C3%B1o_on_a_Taquillon_Base,_unknown_maker,_Spain,_17th_century,_walnut_with_wrought_iron_appliques_and_bone_inlay_-_Museum_of_Fine_Arts,_Springfield,_MA_-_DSC04050.JPG"
+  },
+  "bgt": "#ce9a42",
+  "bgb": "#9e6926"
+ },
+ "bargueno-valencia": {
+  "alt": "Bargueño español con cajones taraceados sobre mesa, Museo de Bellas Artes de Valencia",
+  "w": 1280,
+  "h": 1033,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "credit": {
+   "by": "Dorieo",
+   "licence": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bargue%C3%B1o_-_Museo_de_Bellas_Artes_de_Valencia.JPG"
+  },
+  "bgt": "#cbb387",
+  "bgb": "#665c3e"
+ },
+ "bargueno-goya": {
+  "alt": "Bargueño de cajones taraceados con escudo en la casa natal de Goya, Fuendetodos",
+  "w": 960,
+  "h": 720,
+  "widths": [
+   480,
+   800
+  ],
+  "credit": {
+   "by": "José Luis Filpo Cabana",
+   "licence": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bargue%C3%B1o_en_la_Casa_natal_de_Goya_(Fuendetodos).jpg"
+  },
+  "bgt": "#aab8cb",
+  "bgb": "#212219"
+ },
+ "vargueno-detalle": {
+  "alt": "Detalle de un vargueño español con taracea y portada arquitectónica",
+  "w": 1280,
+  "h": 960,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "credit": {
+   "by": "Anonymous ( Spain ) Unknown author",
+   "licence": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Spain_Vargue%C3%B1o-on-chest_(detail).jpg"
+  },
+  "bgt": "#a4bad0",
+  "bgb": "#3a3531"
+ },
+ "banco-cerralbo": {
+  "alt": "Bargueño y banco almohadillado de talla española en el Museo Cerralbo, Madrid",
+  "w": 1280,
+  "h": 853,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "credit": {
+   "by": "Dorieo",
+   "licence": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bargue%C3%B1o_y_banco_almohadillado_-_Museo_Cerralbo_01.JPG"
+  },
+  "bgt": "#5f4c2d",
+  "bgb": "#655a5a"
+ },
+ "vargueno-soporte": {
+  "alt": "Soporte de vargueño español del siglo XVII, de madera torneada",
+  "w": 1280,
+  "h": 1240,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "credit": {
+   "by": "Unknown artist Unknown artist",
+   "licence": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Vargue%C3%B1o_Stand_(Spain),_17th_century_(CH_18464383).jpg"
+  },
+  "bgt": "#c2c5c9",
+  "bgb": "#d5dbe1"
+ },
+ "reloj-bellver-dorado": {
+  "alt": "Reloj de sobremesa antiguo de bronce dorado, Colección Bellver, Sevilla",
+  "w": 500,
+  "h": 675,
+  "widths": [
+   480
+  ],
+  "credit": {
+   "by": "José Luis Filpo Cabana",
+   "licence": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Reloj_tipo_Bracket,_estilo_Luis_Felipe_(Colecci%C3%B3n_Bellver,_Sevilla).jpg"
+  },
+  "bgt": "#b3b2b2",
+  "bgb": "#763222"
+ },
+ "reloj-bellver-porcelana": {
+  "alt": "Reloj de sobremesa antiguo con porcelana azul y bronce dorado, Colección Bellver, Sevilla",
+  "w": 960,
+  "h": 1280,
+  "widths": [
+   480,
+   800
+  ],
+  "credit": {
+   "by": "Jl FilpoC",
+   "licence": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Reloj,_%C3%A9poca_de_Napole%C3%B3n_III_(Colecci%C3%B3n_Bellver,_Sevilla).jpg"
+  },
+  "bgt": "#adb0b6",
+  "bgb": "#8b3928"
+ },
+ "reloj-bellver-tempus": {
+  "alt": "Reloj antiguo de porcelana policromada «Tempus fugit», Colección Bellver, Sevilla",
+  "w": 960,
+  "h": 960,
+  "widths": [
+   480,
+   800
+  ],
+  "credit": {
+   "by": "Jl FilpoC",
+   "licence": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Reloj_de_porcelana_Tempus_Fugit,_Colecci%C3%B3n_Bellver_(Sevilla).jpg"
+  },
+  "bgt": "#875339",
+  "bgb": "#5d6a74"
+ },
+ "moneda-excelentes": {
+  "alt": "Veinte excelentes de la granada de los Reyes Católicos, Museo Arqueológico Nacional",
+  "w": 1280,
+  "h": 996,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "credit": {
+   "by": "Laci3",
+   "licence": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Veinte_excelentes_de_la_granada_de_los_Reyes_Cat%C3%B3licos_-_Museo_Arqueol%C3%B3gico_Nacional_(M.A.N).jpg"
+  },
+  "bgt": "#403619",
+  "bgb": "#9e8541"
+ },
+ "moneda-reyes-catolicos": {
+  "alt": "Excelentes de los Reyes Católicos con los bustos de Isabel y Fernando, anverso y reverso",
+  "w": 1280,
+  "h": 631,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "credit": {
+   "by": "Reinhard Saczewski",
+   "licence": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Spanien-_Reyes_Cat%C3%B3licos_-_M%C3%BCnzkabinett,_Berlin_-_5505362.jpg"
+  },
+  "bgt": "#faf8f3",
+  "bgb": "#f8f7f6"
+ },
+ "moneda-pesetas-1870": {
+  "alt": "Moneda de cinco pesetas de 1870 con la alegoría de España, anverso y reverso",
+  "w": 960,
+  "h": 480,
+  "widths": [
+   480,
+   800
+  ],
+  "credit": {
+   "by": "Chencho Q.",
+   "licence": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:1870_5_Pesetas.jpg"
+  },
+  "bgt": "#f2f2f1",
+  "bgb": "#e4e4e3"
+ },
+ "moneda-cinco-pesetas": {
+  "alt": "Moneda de cinco pesetas de 1870 acuñada en Madrid, anverso",
+  "w": 960,
+  "h": 960,
+  "widths": [
+   480,
+   800
+  ],
+  "credit": {
+   "by": "Madrid (Espagne ; atelier monétaire). Atelier monétaire",
+   "licence": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Monnaie_-_Espagne,_5_pesetas,_1870,_Madrid_-_btv1b113363320_(1_of_2).jpg"
+  },
+  "bgt": "#ffffff",
+  "bgb": "#fcfcfc"
+ },
+ "moneda-ocho-reales-1759": {
+  "alt": "Moneda de ocho reales de 1759 de tipo columnario, anverso y reverso",
+  "w": 1280,
+  "h": 641,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "credit": {
+   "by": "Sgh",
+   "licence": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ocho_reales_de_plata_1759.jpg"
+  },
+  "bgt": "#e5e5e5",
+  "bgb": "#d9d9d9"
+ },
+ "moneda-reales-carlos-iv": {
+  "alt": "Dos monedas de ocho reales de Carlos IV, de las cecas de México y Potosí",
+  "w": 1280,
+  "h": 947,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "credit": {
+   "by": "Daderot",
+   "licence": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:8_reales,_Spanish_coins,_King_Charles_IV,_left_1807_from_the_Mexico_City_mint,_right_1793_from_the_Potosi_Mint_in_Bolivia,_silver_-_Winterthur_Museum_-_DSC01592.JPG"
+  },
+  "bgt": "#827865",
+  "bgb": "#7a7363"
+ },
+ "moneda-dirham": {
+  "alt": "Dírham de Al-Ándalus de la época de Hisham II, anverso y reverso",
+  "w": 1280,
+  "h": 664,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "credit": {
+   "by": "Jean-Michel Moullec from Vern sur Seiche (35, Bretagne), France",
+   "licence": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:M40_Dirham_AlAndalus_HishamII_1_(8276883051).jpg"
+  },
+  "bgt": "#aaa7ab",
+  "bgb": "#959397"
+ },
+ "moneda-tremis": {
+  "alt": "Tremís visigodo de la época del rey Leovigildo",
+  "w": 1280,
+  "h": 1440,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "credit": {
+   "by": "Dorieo",
+   "licence": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Trem%C3%ADs_forrado_de_oro_de_la_%C3%A9poca_del_rey_visigodo_Leovigildo.jpg"
+  },
+  "bgt": "#6c5539",
+  "bgb": "#a18063"
+ },
+ "moneda-maravedis": {
+  "alt": "Moneda de ocho maravedís del siglo XVII, de cobre",
+  "w": 1280,
+  "h": 960,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "credit": {
+   "by": "HJunghans",
+   "licence": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Spanien_8_Maravedi_17.Jh.JPG"
+  },
+  "bgt": "#e3e5e3",
+  "bgb": "#c3c3c0"
+ },
+ "moneda-dos-reales-1754": {
+  "alt": "Moneda de dos reales de 1754 de tipo columnario",
+  "w": 1280,
+  "h": 1251,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "credit": {
+   "by": "Mexico City Mint",
+   "licence": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:1754_Spanish_Silver_Two_Reales_Coin.jpg"
+  },
+  "bgt": "#cac6c3",
+  "bgb": "#cccac6"
+ },
+ "moneda-cuatro-reales": {
+  "alt": "Moneda de cuatro reales de 1774 con el busto de Carlos III",
+  "w": 1200,
+  "h": 995,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "credit": {
+   "by": "Spanish mint",
+   "licence": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:1774_Spanish_Four_Reales_Coin.jpg"
+  },
+  "bgt": "#b5b6ac",
+  "bgb": "#a19a82"
+ },
+ "piel-abrigo-blanco": {
+  "alt": "Abrigo largo de visón blanco sobre maniquí",
+  "w": 500,
+  "h": 936,
+  "widths": [
+   480
+  ],
+  "credit": {
+   "by": "Libricool ( talk ) 16:08, 12 October 2010 (UTC)",
+   "licence": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Palomino_Mink_for_coat,_Saga.jpg"
+  },
+  "bgt": "#98a099",
+  "bgb": "#535d41"
+ },
+ "piel-abrigo-gris": {
+  "alt": "Abrigo de visón gris azulado",
+  "w": 500,
+  "h": 884,
+  "widths": [
+   480
+  ],
+  "credit": {
+   "by": "Libricool ( talk ) 19:57, 14 October 2010 (UTC)",
+   "licence": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Sapphire_mink_fur_coat_1980.jpg"
+  },
+  "bgt": "#838380",
+  "bgb": "#4e583d"
  }
 }

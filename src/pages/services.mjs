@@ -71,7 +71,7 @@ export default [
   hero: {
     eyebrow: "Compra directa",
     h1: "Compra de antigüedades y obras de arte en Madrid",
-    lead: "Compramos mobiliario antiguo, pintura, plata, bronces, porcelana y objetos de colección. Le presentamos una oferta clara, sin intermediarios y con total discreción.",
+    lead: "Compramos mobiliario antiguo, pintura, plata, bronces, porcelana, joyería, monedas, pieles y objetos de colección. Le presentamos una oferta clara, sin intermediarios y con total discreción.",
     img: "sopera-percier", ratio: "portrait",
     secondary: ["Ver especialidades", "#especialidades"],
   },
@@ -90,12 +90,15 @@ export default [
       t: "cards", alt: true, cols: 3, cardRatio: "square", id: "especialidades",
       h2: "Especialidades que compramos",
       items: [
-        { h3: "Muebles antiguos", p: "Cómodas, consolas, secreteres, sillería y mesas de época.", img: "comoda-laca", ratio: "portrait", href: P.muebles, cta: "Ver muebles" },
+        { h3: "Muebles antiguos", p: "Vargueños y muebles renacentistas españoles, cómodas y secreteres.", img: "comoda-laca", ratio: "portrait", href: P.muebles, cta: "Ver muebles" },
         { h3: "Pintura antigua", p: "Óleos, tablas y cobres de escuelas europeas.", img: "paisaje-koch", ratio: "portrait", href: P.pintura, cta: "Ver pintura" },
         { h3: "Plata antigua", p: "Platería civil y de mesa con marcas de contraste.", img: "sopera-lamerie", ratio: "portrait", href: P.plata, cta: "Ver plata" },
         { h3: "Bronces y esculturas", p: "Bronces, mármoles y terracotas de taller o de autor.", img: "bronce-hercules", ratio: "portrait", href: P.bronces, cta: "Ver esculturas" },
         { h3: "Porcelana y cerámica", p: "Manufacturas europeas y de Compañía de Indias.", img: "sevres-bastones", ratio: "portrait", href: P.porcelana, cta: "Ver porcelana" },
-        { h3: "Relojes y objetos de arte", p: "Pendulas, tabaqueras, cofres, esmaltes y miniaturas.", img: "estuche-te", ratio: "portrait", href: P.relojes, cta: "Ver objetos" },
+        { h3: "Relojes y objetos de arte", p: "Relojes antiguos españoles, tabaqueras, cofres y esmaltes.", img: "reloj-bellver-tempus", ratio: "portrait", href: P.relojes, cta: "Ver relojes" },
+        { h3: "Joyería española", p: "Perlas de Mallorca, damasquinado de Toledo, azabache y coral.", img: "joya-collar-perlas", ratio: "portrait", href: P.joyeria, cta: "Ver joyería" },
+        { h3: "Monedas españolas", p: "Monedas de todas las épocas, materiales y tiradas.", img: "moneda-cinco-pesetas", ratio: "portrait", href: P.monedas, cta: "Ver monedas" },
+        { h3: "Pieles y abrigos de piel", p: "Abrigos, capas, estolas y manguitos antiguos y vintage.", img: "piel-capa-rojiza", ratio: "portrait", href: P.pieles, cta: "Ver pieles" },
       ],
     },
     {
@@ -122,13 +125,13 @@ export default [
 {
   path: P.herencias,
   title: "Tasación de herencias y testamentarias en Madrid | Aldaba",
-  description: "Tasación de herencias en Madrid: inventario y valoración de muebles, pintura, plata y objetos de arte para el reparto, con informe pericial y discreción.",
+  description: "Tasación de herencias en Madrid: inventario, valoración y compra de bienes artísticos, y vaciado de la vivienda con informe pericial y discreción.",
   crumbs: crumb(["Tasación de herencias", P.herencias]),
   service: { name: "Tasación de herencias y testamentarias", type: "Tasación de bienes artísticos de herencias", free: true },
   hero: {
     eyebrow: "Herencias y testamentarias",
     h1: "Tasación de herencias y testamentarias en Madrid",
-    lead: "Inventariamos y valoramos los bienes artísticos de una herencia: mobiliario, pintura, plata, bronces y objetos de colección. Con respeto por la familia y con total discreción.",
+    lead: "Inventariamos, valoramos y compramos los bienes artísticos de una herencia y nos ocupamos del vaciado de la vivienda. Con respeto por la familia y con total discreción.",
     img: "salon-burdeos", ratio: "portrait",
     secondary: ["Cómo trabajamos", "#proceso"],
   },
@@ -162,11 +165,21 @@ export default [
       ],
     },
     {
+      t: "split", side: "left", ratio: "portrait", id: "vaciado",
+      h2: "Vaciado de la vivienda",
+      paras: [
+        "Cuando los herederos ya han elegido lo que se quedan, queda una casa llena de objetos. Nos ocupamos del vaciado completo de la vivienda: separamos lo que tiene valor, lo que puede donarse y lo que hay que retirar.",
+        "Compramos las piezas de interés, le entregamos la vivienda vacía y coordinamos la retirada del resto con empresas especializadas. Usted decide en cada paso y recibe una relación de todo lo que se ha retirado.",
+      ],
+      list: ["Clasificación de muebles, cuadros, objetos y enseres", "Compra de las piezas de valor", "Retirada y gestión del resto con empresas especializadas", "Vivienda vacía y lista para vender o alquilar"],
+      img: "salon-luis-xv",
+    },
+    {
       t: "wall",
       h2: "Bienes que valoramos en una testamentaría",
       imgs: ["secreter-porcelana", "retrato-andaluz", "sopera-roettiers", "caja-oro-heric"],
     },
   ],
-  faq: [FAQ.herencia, FAQ.gratis, FAQ.discrecion, FAQ.domicilio],
+  faq: [FAQ.herencia, { q: "¿Pueden vaciar una vivienda completa?", a: "Sí. Clasificamos los bienes, compramos lo que tiene valor y coordinamos la retirada del resto con empresas especializadas, hasta dejar la vivienda vacía. Se acuerda antes de empezar." }, FAQ.gratis, FAQ.discrecion],
 },
 ];

@@ -28,7 +28,7 @@ export const businessNode = (page) => ({
   telephone: `+34 ${PHONES[0].slice(0, 3)} ${PHONES[0].slice(3, 6)} ${PHONES[0].slice(6)}`,
   contactPoint: PHONES.map((n) => ({ "@type": "ContactPoint", telephone: `+34 ${n.slice(0, 3)} ${n.slice(3, 6)} ${n.slice(6)}`, contactType: "atención al cliente", areaServed: "ES", availableLanguage: ["es"] })),
   areaServed,
-  knowsAbout: ["Antigüedades", "Tasación de arte", "Mobiliario antiguo", "Pintura antigua", "Plata antigua", "Bronces y esculturas", "Porcelana antigua", "Relojes antiguos"],
+  knowsAbout: ["Antigüedades", "Tasación de arte", "Mobiliario antiguo", "Pintura antigua", "Plata antigua", "Bronces y esculturas", "Porcelana antigua", "Relojes antiguos", "Joyería española", "Numismática española", "Pieles y abrigos de piel"],
   openingHours: undefined,
   makesOffer: [
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tasación pericial de antigüedades y obras de arte", serviceType: "Tasación de antigüedades" }, price: "0", priceCurrency: "EUR", description: "Valoración orientativa gratuita y visita a domicilio" },

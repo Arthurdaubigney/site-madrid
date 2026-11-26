@@ -22,20 +22,23 @@ export default [{
       items: [
         { label: "Tasación de antigüedades y obras de arte", p: "Peritaje de muebles, pintura, plata, bronces y objetos de colección, con informe escrito.", href: P.tasacion },
         { label: "Compra directa de antigüedades", p: "Una oferta clara por la pieza o por el conjunto, sin intermediarios y con discreción.", href: P.compra },
-        { label: "Tasación y gestión de herencias", p: "Inventario, valoración para el reparto y compra de los bienes artísticos de una testamentaría.", href: P.herencias },
+        { label: "Tasación y gestión de herencias", p: "Inventario, valoración para el reparto, compra de bienes artísticos y vaciado de la vivienda.", href: P.herencias },
       ],
     },
     {
       t: "cards", alt: true, cols: 3, id: "que-compramos",
       h2: "Qué <em>antigüedades</em> compramos en Madrid",
-      intro: "Seis especialidades, del siglo XVI al XIX, con atención a la autoría, el estado y la procedencia.",
+      intro: "Nueve especialidades, de piezas del siglo XVI al XX, con atención a la autoría, el estado y la procedencia.",
       items: [
-        { h3: "Muebles antiguos", p: "Cómodas, consolas, secreteres y sillería de ebanistas de época.", img: "consola-dorada", href: P.muebles, cta: "Ver muebles" },
+        { h3: "Muebles antiguos", p: "Vargueños y muebles renacentistas españoles, cómodas, consolas y secreteres.", img: "bargueno-valencia", href: P.muebles, cta: "Ver muebles" },
         { h3: "Pintura antigua", p: "Óleos y tablas de escuelas españolas y europeas, de los siglos XVI al XIX.", img: "goya-toros", href: P.pintura, cta: "Ver pintura" },
         { h3: "Plata antigua", p: "Soperas, juegos de té, candelabros y bandejas con marcas de platero.", img: "sopera-weyhe", href: P.plata, cta: "Ver plata" },
         { h3: "Bronces y esculturas", p: "Bronces patinados, mármoles y bustos de taller o de autor.", img: "bronce-yacente", href: P.bronces, cta: "Ver esculturas" },
         { h3: "Porcelana y cerámica", p: "Sèvres, Meissen, Buen Retiro y otras manufacturas europeas.", img: "sevres-perlas", href: P.porcelana, cta: "Ver porcelana" },
-        { h3: "Relojes y objetos de arte", p: "Relojes de sobremesa, tabaqueras, cofres y esmaltes.", img: "caja-oro-bodson", href: P.relojes, cta: "Ver objetos" },
+        { h3: "Relojes y objetos de arte", p: "Relojes antiguos españoles, tabaqueras, cofres y esmaltes.", img: "caja-oro-bodson", href: P.relojes, cta: "Ver relojes" },
+        { h3: "Joyería española", p: "Perlas de Mallorca, damasquinado de Toledo, azabache y coral.", img: "joya-collar-perlas", href: P.joyeria, cta: "Ver joyería" },
+        { h3: "Monedas españolas", p: "Monedas de todas las épocas, materiales y tiradas.", img: "moneda-excelentes", href: P.monedas, cta: "Ver monedas" },
+        { h3: "Pieles y abrigos de piel", p: "Abrigos, capas, estolas y manguitos antiguos y vintage.", img: "piel-manguito-marron", href: P.pieles, cta: "Ver pieles" },
       ],
     },
     {

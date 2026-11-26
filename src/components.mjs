@@ -83,7 +83,7 @@ export function footer() {
       <span>© ${SITE.year} ${esc(SITE.brand)}</span>
       <a href="/aviso-legal/">Aviso legal</a>
       <a href="/politica-de-privacidad/">Privacidad</a>
-      <span class="foot__credit">Fotografías: The Metropolitan Museum of Art, Open Access (CC0)</span>
+      <a class="foot__credit" href="/creditos-fotograficos/">Créditos de las fotografías: Metropolitan Museum of Art (CC0) y Wikimedia Commons</a>
     </div>
   </div>
 </footer>`;

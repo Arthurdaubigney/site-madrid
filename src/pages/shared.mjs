@@ -17,6 +17,10 @@ export const P = {
   bronces: "/compra-antiguedades-madrid/bronces-y-esculturas/",
   porcelana: "/compra-antiguedades-madrid/porcelana-y-ceramica/",
   relojes: "/compra-antiguedades-madrid/relojes-y-objetos-de-arte/",
+  joyeria: "/compra-antiguedades-madrid/joyeria-espanola/",
+  monedas: "/compra-antiguedades-madrid/monedas-espanolas/",
+  pieles: "/compra-antiguedades-madrid/pieles-y-abrigos-de-piel/",
+  creditos: "/creditos-fotograficos/",
 };
 
 export const stepsTasacion = [

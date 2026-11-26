@@ -1,5 +1,8 @@
 import { P, FAQ, crumb } from "./shared.mjs";
 import { SITE, LEGAL, PHONES, phoneText, phoneHref } from "../config.mjs";
+import { allImages } from "../images.mjs";
+
+const creditRows = Object.entries(allImages()).filter(([, m]) => m.credit).map(([, m]) => `<li><a href="${m.credit.page}" rel="noopener">${m.alt}</a>. ${m.credit.by.replace(/</g, "&lt;")}, licencia ${m.credit.licence}.</li>`).join("");
 
 const faqAll = [
   { q: "¿La tasación es realmente gratuita?", a: FAQ.gratis.a },
@@ -114,9 +117,26 @@ export default [
       sections: [
         ["Titular del sitio web", `<p>Este sitio web pertenece a la ${SITE.brand}, galería de antigüedades y gabinete de tasación con sede en ${SITE.locality}.</p>${LEGAL.razonSocial ? `<p>Razón social: ${LEGAL.razonSocial}.${LEGAL.nif ? ` NIF: ${LEGAL.nif}.` : ""}</p>` : ""}${LEGAL.domicilio ? `<p>Domicilio: ${LEGAL.domicilio}.</p>` : ""}<p>Para cualquier consulta puede utilizar el <a href="/contacto/#formulario">formulario de contacto</a>.</p>`],
         ["Condiciones de uso", "<p>El acceso y el uso de este sitio web atribuyen la condición de usuario e implican la aceptación de este aviso. La información publicada tiene carácter informativo y no constituye una oferta vinculante ni una tasación. Las valoraciones se emiten tras el estudio de cada pieza.</p>"],
-        ["Propiedad intelectual", "<p>Los textos y el diseño de este sitio pertenecen a la galería. Las fotografías proceden de la colección de acceso abierto del Metropolitan Museum of Art (licencia CC0). Queda prohibida la reproducción de los contenidos propios sin autorización.</p>"],
+        ["Propiedad intelectual", "<p>Los textos y el diseño de este sitio pertenecen a la galería. Las fotografías proceden de la colección de acceso abierto del Metropolitan Museum of Art (licencia CC0) y de Wikimedia Commons; los <a href='/creditos-fotograficos/'>créditos</a> detallan autores y licencias. Queda prohibida la reproducción de los contenidos propios sin autorización.</p>"],
         ["Responsabilidad", "<p>La galería procura que la información sea exacta y actual, pero no responde de los errores u omisiones que pudieran existir ni del uso que se haga de ella. Los enlaces a sitios de terceros, como el servicio de formularios, se rigen por sus propias condiciones.</p>"],
         ["Legislación aplicable", "<p>Este aviso se rige por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales que correspondan conforme a derecho.</p>"],
+      ],
+    },
+  ],
+},
+{
+  path: P.creditos,
+  title: "Créditos de las fotografías | Galería Anticuaria Aldaba",
+  description: "Autores, licencias y procedencia de las fotografías de la Galería Anticuaria Aldaba en Madrid: Metropolitan Museum of Art (CC0) y Wikimedia Commons.",
+  form: false, bare: true,
+  crumbs: crumb(["Créditos de las fotografías", P.creditos]),
+  hero: { img: "salon-tesse" },
+  blocks: [
+    {
+      t: "doc", h1: "Créditos de las fotografías",
+      sections: [
+        ["Metropolitan Museum of Art", "<p>Muchas fotografías proceden de la colección de acceso abierto del Metropolitan Museum of Art de Nueva York, publicada en dominio público bajo licencia CC0.</p>"],
+        ["Wikimedia Commons", `<p>Otras fotografías proceden de Wikimedia Commons, con las licencias y autores que se indican a continuación. Las imágenes de dominio público o CC0 no exigen atribución, pero se citan igualmente.</p><ul class="credits">${creditRows}</ul>`],
       ],
     },
   ],

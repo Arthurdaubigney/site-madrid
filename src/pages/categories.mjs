@@ -1,6 +1,6 @@
 import { P, FAQ, crumb } from "./shared.mjs";
 
-const make = (c) => ({
+export const make = (c) => ({
   path: c.path,
   title: c.title,
   description: c.description,
@@ -8,7 +8,9 @@ const make = (c) => ({
   service: { name: c.service, type: c.service },
   hero: { eyebrow: c.eyebrow, h1: c.h1, lead: c.lead, img: c.hero, ratio: c.heroRatio || "portrait", secondary: ["Qué valoramos", "#valoramos"] },
   blocks: [
-    { t: "split", side: "right", ratio: c.ratio || "land", h2: c.h2, paras: c.paras, list: c.list, img: c.img },
+    ...(c.first || []),
+    { t: "split", side: c.first ? "left" : "right", ratio: c.ratio || "land", h2: c.h2, paras: c.paras, list: c.list, img: c.img },
+    ...(c.extra || []),
     { t: "facts", alt: true, id: "valoramos", h2: `Qué valoramos en ${c.what}`, items: c.factors },
     { t: "wall", h2: c.wallH2, intro: c.wallIntro, imgs: c.wall },
     {
@@ -23,12 +25,37 @@ const make = (c) => ({
 const cats = [
 {
   path: P.muebles, name: "Muebles antiguos", what: "un mueble antiguo", service: "Compra y tasación de muebles antiguos",
-  title: "Compra de muebles antiguos en Madrid | Tasación y venta",
-  description: "Compramos y tasamos muebles antiguos en Madrid: cómodas, consolas, secreteres y sillería de época, con peritaje gratuito a domicilio y total discreción.",
-  eyebrow: "Mobiliario de época", h1: "Compra y tasación de muebles antiguos en Madrid",
-  lead: "Cómodas, consolas, secreteres, sillería, mesas y bargueños de los siglos XVII al XIX. Examinamos la ebanistería, los bronces y el estado para fijar un valor justo.",
-  hero: "comoda-marqueteria", heroRatio: "land",
-  h2: "Mobiliario de ebanistas y talleres de época", img: "consola-dorada",
+  title: "Muebles antiguos y renacentistas españoles en Madrid | Aldaba",
+  description: "Compramos y tasamos muebles antiguos en Madrid, con especial interés en vargueños y muebles renacentistas españoles. Peritaje gratuito a domicilio.",
+  eyebrow: "Mobiliario español y europeo", h1: "Compra y tasación de muebles antiguos y renacentistas españoles",
+  lead: "Vargueños, bargueños, taquillones, sillones de fraileros y arcones del Renacimiento español, además de cómodas, consolas y secreteres europeos. Examinamos la talla, la taracea, los herrajes y el estado.",
+  hero: "vargueno-taquillon", heroRatio: "portrait",
+  first: [
+    {
+      t: "split", side: "right", ratio: "land", id: "renacimiento-espanol",
+      h2: "Muebles renacentistas españoles",
+      paras: [
+        "El mueble español del Renacimiento y del siglo XVII tiene un carácter propio: nogal tallado, herrajes de hierro, taracea de influencia mudéjar y una arquitectura de líneas sobrias. Su pieza más reconocida es el vargueño (o bargueño), un escritorio portátil de cajones y gavetas que se apoya en un taquillón o en una mesa.",
+        "Compramos vargueños y bargueños, taquillones, sillones de fraileros, sillas de cadera, arcones, mesas de patas de lira y cajoneras de sacristía. Valoramos tanto la pieza aislada como el conjunto de una casa solariega.",
+      ],
+      list: ["Vargueños y bargueños, con su soporte original", "Taquillones, arcones y cajoneras", "Sillones de fraileros, sillas de cadera y bancos", "Mesas de lira y mesas de patas torneadas"],
+      img: "bargueno-valencia",
+    },
+    {
+      t: "facts", id: "valoramos-renacimiento", h2: "Qué valoramos en un mueble renacentista español",
+      items: [
+        { h3: "Soporte y escritorio", p: "Muchos vargueños se han unido a un soporte de otra época. Comprobamos que escritorio y taquillón sean coherentes y de época." },
+        { h3: "Taracea, talla y herrajes", p: "Valoramos la riqueza de la taracea, la calidad de la talla y que los herrajes y cerraduras de hierro sean originales." },
+        { h3: "Madera, estructura y uso", p: "Examinamos el nogal, las reparaciones, las patas y el desgaste normal de siglos, que distinguimos del deterioro." },
+      ],
+    },
+    {
+      t: "wall", h2: "Vargueños, bargueños y mobiliario de casa señorial",
+      intro: "Muebles españoles del Renacimiento y del siglo XVII, de museos y colecciones.",
+      imgs: ["banco-cerralbo", "vargueno-detalle", "bargueno-goya", "vargueno-soporte"],
+    },
+  ],
+  h2: "Mobiliario europeo de ebanistas de época", img: "consola-dorada",
   paras: [
     "Compramos muebles españoles, franceses, ingleses e italianos con interés artístico. Una cómoda estampillada por un ebanista, una consola dorada con sobre de mármol o un secreter con marquetería pueden alcanzar valores muy distintos según su autoría y su estado.",
     "Nos interesa tanto la pieza aislada como el conjunto de una vivienda señorial: sillería, mesas, espejos, vitrinas y lámparas.",
@@ -43,6 +70,7 @@ const cats = [
   wall: ["secreter-porcelana", "sillon-heurtaut", "salon-luis-xv", "comoda-laca"],
   related: [["Pintura antigua", "Óleos y tablas de escuelas europeas.", P.pintura], ["Bronces y esculturas", "Bronces, mármoles y terracotas.", P.bronces], ["Tasación de antigüedades", "Cómo es una tasación pericial.", P.tasacion]],
   faq: [
+    { q: "¿Compran vargueños y muebles renacentistas españoles?", a: "Sí, es una de nuestras especialidades. Valoramos vargueños, bargueños, taquillones, arcones y sillería española, con atención al soporte, la taracea y los herrajes." },
     { q: "¿Compran muebles que necesitan restauración?", a: "Sí. Valoramos el estado real del mueble y le explicamos cuánto influye una restauración pendiente en su valor." },
     { q: "¿Valoran un conjunto de sillería o un salón completo?", a: "Sí. Un conjunto coherente suele valer más que la suma de sus piezas, y lo tasamos como conjunto cuando procede." },
     FAQ.fotos, FAQ.gratis,
@@ -158,11 +186,32 @@ const cats = [
 },
 {
   path: P.relojes, name: "Relojes y objetos de arte", what: "un reloj u objeto de arte", service: "Compra y tasación de relojes y objetos de arte antiguos",
-  title: "Compra de relojes antiguos y objetos de arte en Madrid",
-  description: "Compramos y tasamos relojes de sobremesa, tabaqueras, cofres y esmaltes antiguos en Madrid. Peritaje gratuito a domicilio y discreción absoluta.",
-  eyebrow: "Objetos de vitrina", h1: "Compra y tasación de relojes antiguos y objetos de arte",
-  lead: "Relojes de sobremesa, tabaqueras de oro, cofres, esmaltes y miniaturas. Piezas pequeñas cuyo valor depende de la autoría y del trabajo.",
-  hero: "reloj-leroy", heroRatio: "portrait",
+  title: "Compra de relojes antiguos españoles y objetos de arte",
+  description: "Compramos y tasamos relojes antiguos españoles, de sobremesa y de pared, además de tabaqueras, cofres y esmaltes en Madrid. Peritaje gratuito a domicilio.",
+  eyebrow: "Relojería y objetos de vitrina", h1: "Compra y tasación de relojes antiguos españoles y objetos de arte",
+  lead: "Relojes de sobremesa, de péndola y de pared de relojeros españoles, además de tabaqueras, cofres y esmaltes. Piezas cuyo valor depende de la firma, el mecanismo y el trabajo de la caja.",
+  hero: "reloj-bellver-porcelana", heroRatio: "portrait",
+  first: [
+    {
+      t: "split", side: "right", ratio: "land", id: "reloj-espanol",
+      h2: "Relojes antiguos españoles",
+      paras: [
+        "La relojería española tiene una larga tradición, desde los relojes de mesa de los siglos XVI y XVII hasta los relojes de sobremesa y de péndola de los siglos XVIII y XIX. Un reloj firmado por un relojero español, con su ciudad, es una pieza muy buscada por coleccionistas.",
+        "Compramos relojes de sobremesa con caja de bronce, de porcelana o de maderas finas, relojes de pared y de linterna, relojes de caja alta y relojes de bolsillo. Estudiamos la firma, el mecanismo y la caja.",
+      ],
+      list: ["Relojes de sobremesa y de péndola", "Relojes de pared y de linterna", "Relojes de caja alta y de bolsillo", "Esferas, mecanismos y cajas firmados"],
+      img: "reloj-bellver-tempus",
+    },
+    {
+      t: "facts", id: "valoramos-reloj-espanol", h2: "Qué valoramos en un reloj antiguo español",
+      items: [
+        { h3: "Firma y procedencia", p: "La firma del relojero y la ciudad de origen sitúan la pieza. La contrastamos con repertorios de relojeros españoles." },
+        { h3: "Mecanismo original", p: "Comprobamos que el mecanismo, la esfera y la caja pertenezcan a la misma época y que no haya sustituciones." },
+        { h3: "Caja y acabado", p: "Valoramos el bronce dorado, la porcelana o la madera de la caja, y el estado del acabado y de los cristales." },
+      ],
+    },
+  ],
+  h2: "Pequeñas obras de gran trabajo", img: "cofre-genesis",
   h2: "Pequeñas obras de gran trabajo", img: "cofre-genesis", ratio: "land",
   paras: [
     "Relojes de sobremesa con bronce dorado y porcelana, tabaqueras de oro cinceladas, cofres de esmalte y miniaturas son piezas de colección con un mercado propio y muy exigente.",
@@ -175,9 +224,10 @@ const cats = [
     { h3: "Estado completo", p: "Pesan las piezas originales, las llaves, los cristales y que no falte ninguna parte del conjunto." },
   ],
   wallH2: "Relojes, tabaqueras y cofres", wallIntro: "Objetos de arte de los siglos XVII al XIX.",
-  wall: ["reloj-lenoir", "estuche-te", "caja-oro-bodson", "reloj-brockbank"],
+  wall: ["reloj-bellver-dorado", "estuche-te", "caja-oro-bodson", "reloj-brockbank"],
   related: [["Plata antigua", "Platería civil con marcas de platero.", P.plata], ["Porcelana y cerámica", "Manufacturas europeas.", P.porcelana], ["Tasación de antigüedades", "Cómo es una tasación pericial.", P.tasacion]],
   faq: [
+    { q: "¿Compran relojes antiguos españoles?", a: "Sí. Valoramos relojes de sobremesa, de pared, de péndola y de bolsillo de relojeros españoles, con su firma, su mecanismo y su caja." },
     { q: "¿Compran relojes que no funcionan?", a: "Sí. Un reloj parado puede tener un gran valor por su caja y su autoría. Lo valoramos y le indicamos qué reparación conviene." },
     { q: "¿Valoran tabaqueras y cajas de oro?", a: "Sí. Examinamos los punzones, el cincelado y el estado, y valoramos la pieza por su trabajo además de por su metal." },
     FAQ.fotos, FAQ.gratis,

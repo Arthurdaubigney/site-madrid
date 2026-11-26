@@ -2,6 +2,8 @@ import { readFileSync } from "node:fs";
 
 const manifest = JSON.parse(readFileSync(new URL("./data/images.json", import.meta.url), "utf8"));
 
+export const allImages = () => manifest;
+
 export const imageInfo = (slug) => {
   const m = manifest[slug];
   if (!m) throw new Error(`Imagen desconocida: ${slug}`);
