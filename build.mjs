@@ -52,7 +52,7 @@ for (const p of pages) {
 
 // 404
 write("404.html", renderPage({
-  path: "/404.html", title: "Página no encontrada | Galería Anticuaria Aldaba", description: "La página que busca no existe. Vuelva al inicio de la Galería Anticuaria Aldaba, anticuario y tasador en Madrid.",
+  path: "/404.html", title: "Página no encontrada | Aldaba Anticuarios", description: "La página que busca no existe. Vuelva al inicio de Aldaba Anticuarios, anticuarios a domicilio en Madrid y toda España.",
   noindex: true, form: false, bare: true, crumbs: [], hero: { img: "salon-tesse" },
   blocks: [{ t: "doc", h1: "Página no encontrada", sections: [["Esta dirección no existe", '<p>Puede que el enlace haya cambiado. Vuelva al <a href="/">inicio</a> o <a href="/contacto/#formulario">solicite una tasación gratuita</a>.</p>']] }],
 }, css, jsPath));

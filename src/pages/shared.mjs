@@ -8,7 +8,7 @@ export const P = {
   herencias: "/tasacion-herencias-madrid/",
   comunidad: "/tasacion-antiguedades-comunidad-de-madrid/",
   espana: "/tasacion-antiguedades-toda-espana/",
-  galeria: "/la-galeria/",
+  nosotros: "/quienes-somos/",
   faq: "/preguntas-frecuentes/",
   contacto: "/contacto/",
   muebles: "/compra-antiguedades-madrid/muebles-antiguos/",
@@ -24,21 +24,22 @@ export const P = {
 };
 
 export const stepsTasacion = [
-  { h3: "Nos escribe", p: "Envíe fotografías de la pieza, sus medidas y lo que sepa de su origen mediante el formulario." },
-  { h3: "Valoración orientativa", p: "Un perito estudia las imágenes y le responde con una primera horquilla de valor, sin coste." },
-  { h3: "Visita a domicilio", p: "Si la pieza lo merece, vamos a verla en persona, la examinamos y la documentamos." },
-  { h3: "Informe u oferta", p: "Recibe un informe de tasación o una oferta de compra. Usted decide, sin plazos ni presión." },
+  { h3: "Nos escribe o nos llama", p: "Fotografías, medidas y lo que sepa de la pieza, por el formulario o por teléfono." },
+  { h3: "Primera valoración", p: "Estudiamos las imágenes y le damos una horquilla de valor, sin coste." },
+  { h3: "Vamos a su casa", p: "Si la pieza lo merece, acudimos a su domicilio, la examinamos y la fotografiamos." },
+  { h3: "Valoración u oferta", p: "Recibe un informe de valoración o una oferta de compra. Usted decide, sin plazos ni presión." },
 ];
 
 export const FAQ = {
-  gratis: { q: "¿La tasación es realmente gratuita?", a: "La valoración orientativa por fotografías y la primera visita a domicilio en Madrid no tienen coste ni compromiso. Solo se presupuesta, antes de empezar, el informe pericial por escrito cuando usted lo necesita para un seguro, una herencia o un trámite." },
-  domicilio: { q: "¿Tasan a domicilio?", a: "Sí. Vamos a su vivienda en Madrid y en la Comunidad de Madrid para examinar la pieza en persona. Fuera de Madrid empezamos por las fotografías y valoramos el desplazamiento según la pieza." },
+  gratis: { q: "¿La tasación es gratuita?", a: "La valoración orientativa a partir de fotografías y la primera visita a domicilio en Madrid no tienen coste ni compromiso. Si necesita un informe de valoración por escrito, por ejemplo para un seguro o una herencia, se lo presupuestamos antes de empezar." },
+  domicilio: { q: "¿Vienen a mi casa?", a: "Sí, somos anticuarios a domicilio. Vamos a su vivienda en Madrid y en toda la Comunidad de Madrid. Fuera de Madrid empezamos por las fotografías y nos desplazamos cuando la pieza o el conjunto lo justifican." },
+  local: { q: "¿Tienen tienda o local abierto al público?", a: "No. Somos anticuarios a domicilio: vamos a su casa en Madrid y en toda España, vemos la pieza en su sitio y le explicamos qué es y qué puede valer." },
   fotos: { q: "¿Qué fotografías debo enviar?", a: "Una vista general de la pieza, el detalle de firmas, marcas, etiquetas o sellos, la parte posterior o inferior y cualquier desperfecto. Añada las medidas y lo que sepa de su procedencia." },
-  discrecion: { q: "¿Cómo garantizan la discreción?", a: "No publicamos ni difundimos datos del propietario ni de la pieza. Trabajamos con confidencialidad desde el primer mensaje, también en tasaciones de herencias." },
+  discrecion: { q: "¿Cómo tratan la información?", a: "Con discreción. No publicamos ni difundimos datos del propietario ni de la pieza, y trabajamos con confidencialidad desde el primer mensaje." },
   vender: { q: "¿Estoy obligado a vender si me hacen una oferta?", a: "No. La tasación y la oferta son independientes y no le comprometen. Puede conservar la pieza, venderla a otro comprador o aceptar nuestra propuesta." },
-  valor: { q: "¿Qué hace que una antigüedad tenga valor?", a: "Pesan la autoría o la escuela, la época, la calidad de ejecución, el estado de conservación, las restauraciones, la procedencia documentada y la demanda actual del mercado. Una pieza antigua no es siempre una pieza valiosa, y se lo decimos con claridad." },
-  herencia: { q: "¿Pueden valorar los bienes de una herencia?", a: "Sí. Inventariamos y tasamos mobiliario, pintura, plata y objetos de arte de una herencia y emitimos un informe pericial para el reparto. Consulte con su notario o asesor los requisitos de cada trámite." },
-  espana: { q: "¿Trabajan fuera de Madrid?", a: "Sí, en toda España. Valoramos por fotografías, nos desplazamos cuando la pieza o el conjunto lo justifican y coordinamos el embalaje y el transporte con empresas especializadas en obras de arte." },
+  valor: { q: "¿Qué hace que una antigüedad tenga valor?", a: "Influyen la autoría o la escuela, la época, la calidad de ejecución, el estado, las restauraciones, la procedencia y la demanda del mercado. Una pieza antigua no siempre es valiosa, y se lo decimos con claridad." },
+  herencia: { q: "¿Valoran los bienes de una herencia?", a: "Sí. Hacemos un inventario de los muebles, cuadros, objetos y joyas de la vivienda, los valoramos uno a uno y le entregamos una relación por escrito para el reparto. Consulte con su notario o asesor los requisitos de cada trámite." },
+  espana: { q: "¿Se desplazan fuera de Madrid?", a: "Sí, a toda España. Valoramos primero por fotografías y vamos a su domicilio cuando la pieza o la colección lo justifican. El embalaje y el transporte se coordinan con empresas especializadas en obras de arte." },
   procedencia: { q: "¿Compran piezas sin documentación?", a: "Para comprar necesitamos poder acreditar la propiedad y la procedencia legal de la pieza. Le indicamos qué documentación conviene reunir y cómo conseguirla." },
-  restauradas: { q: "¿Compran piezas restauradas o con desperfectos?", a: "Sí. El estado influye en el valor, pero muchas piezas restauradas conservan un valor importante. Distinguimos entre una restauración correcta y una intervención que perjudica a la pieza." },
+  restauradas: { q: "¿Compran piezas restauradas o con desperfectos?", a: "Sí. El estado influye en el valor, pero muchas piezas restauradas conservan un valor importante. Le explicamos la diferencia entre una restauración cuidadosa y una intervención que perjudica a la pieza." },
 };

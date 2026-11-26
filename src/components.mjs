@@ -38,7 +38,7 @@ export function header(current, formHref) {
   return `<header class="nav" id="top-nav">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
-    <a class="brand" href="/" aria-label="${esc(SITE.brand)}, inicio">${mark}<span class="brand__text"><span class="brand__name">${esc(SITE.short)}</span><span class="brand__sub">Galería anticuaria</span></span></a>
+    <a class="brand" href="/" aria-label="${esc(SITE.brand)}, inicio">${mark}<span class="brand__text"><span class="brand__name">${esc(SITE.short)}</span><span class="brand__sub">Anticuarios a domicilio</span></span></a>
     <nav class="nav__main" aria-label="Principal"><ul>${items}</ul></nav>
     <a class="nav__tel" href="${phoneHref(PHONES[0])}" aria-label="Llamar al ${phoneText(PHONES[0])}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>${phoneText(PHONES[0])}</span></a>
     <a class="btn btn--primary nav__cta" href="${formHref}">${esc(CTA)}</a>
@@ -47,7 +47,7 @@ export function header(current, formHref) {
   <div class="sheet" id="menu-movil" hidden>
     <nav aria-label="Menú móvil"><ul>${sheet}<li><a href="/preguntas-frecuentes/">Preguntas frecuentes</a></li><li><a href="/contacto/">Contacto</a></li></ul></nav>
     <a class="btn btn--primary" href="${formHref}">${esc(CTA)}</a>
-    <p class="sheet__tel">Llame a la galería: ${phoneLinks()}</p>
+    <p class="sheet__tel">Llámenos: ${phoneLinks()}</p>
   </div>
 </header>`;
 }
@@ -60,9 +60,9 @@ export function footer() {
   <div class="wrap">
     <div class="foot__top">
       <div class="foot__brand">
-        <a class="brand brand--foot" href="/" aria-label="${esc(SITE.brand)}, inicio">${mark}<span class="brand__text"><span class="brand__name">${esc(SITE.short)}</span><span class="brand__sub">Galería anticuaria</span></span></a>
-        <p>Galería de antigüedades y gabinete de tasación en ${SITE.locality}. Tasación pericial, compra directa y gestión de herencias con discreción.</p>
-        <p class="foot__place">${SITE.locality}. Visitas con cita previa.</p>
+        <a class="brand brand--foot" href="/" aria-label="${esc(SITE.brand)}, inicio">${mark}<span class="brand__text"><span class="brand__name">${esc(SITE.short)}</span><span class="brand__sub">Anticuarios a domicilio</span></span></a>
+        <p>Anticuarios a domicilio en Madrid y toda España. Tasación, compra de antigüedades y valoración de herencias, con discreción.</p>
+        <p class="foot__place">Vamos a su casa en Madrid y toda España.</p>
         <p class="foot__tel">Teléfono: ${phoneLinks()}</p>
       </div>
       <div class="foot__col"><h3>Servicios</h3><ul>
@@ -75,7 +75,7 @@ export function footer() {
       <div class="foot__col"><h3>Dónde trabajamos</h3><ul>
         <li><a href="/tasacion-antiguedades-comunidad-de-madrid/">Comunidad de Madrid</a></li>
         <li><a href="/tasacion-antiguedades-toda-espana/">Toda España</a></li>
-        <li><a href="/la-galeria/">La galería</a></li>
+        <li><a href="/quienes-somos/">Quiénes somos</a></li>
         <li><a href="/contacto/">Contacto</a></li>
       </ul></div>
     </div>
@@ -106,7 +106,7 @@ export function tallyForm({ title = "Solicite su <em>tasación gratuita</em>", l
       </div>`
     : `<div class="tally tally--fallback" data-tally>
         <!-- TALLY: pegue su ID en src/config.mjs (TALLY_FORM_ID) y vuelva a ejecutar "npm run build". -->
-        <h3>Contacto directo con la galería</h3>
+        <h3>Escríbanos o llámenos</h3>
         <p>Escríbanos con unas fotografías de la pieza, sus medidas y cualquier dato que conozca de su origen.</p>
         <a class="btn btn--primary" href="mailto:${SITE.email}?subject=Solicitud%20de%20tasaci%C3%B3n">Enviar solicitud por correo${arrow}</a>
       </div>`;

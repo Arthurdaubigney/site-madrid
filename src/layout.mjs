@@ -1,9 +1,9 @@
 import { SITE, CTA, PHONES } from "./config.mjs";
-import { esc, header, footer, actionBar, tallyForm, renderBlock, breadcrumbs, button, arrow } from "./components.mjs";
+import { esc, header, footer, actionBar, phoneLinks, tallyForm, renderBlock, breadcrumbs, button, arrow } from "./components.mjs";
 import { pic, imageInfo, ratioStyle, fitFor, frameRatio } from "./images.mjs";
 
 const abs = (p) => `${SITE.url}${p}`;
-const BIZ_ID = `${SITE.url}/#galeria`;
+const BIZ_ID = `${SITE.url}/#negocio`;
 
 const areaServed = [
   { "@type": "City", name: "Madrid" },
@@ -12,28 +12,21 @@ const areaServed = [
 ];
 
 export const businessNode = (page) => ({
-  "@type": ["AntiqueStore", "LocalBusiness", "ProfessionalService"],
+  "@type": ["ProfessionalService", "LocalBusiness"],
   "@id": BIZ_ID,
   name: SITE.brand,
   url: abs("/"),
   image: abs(`/img/${page?.ogImage || "salon-tesse"}-1200.webp`),
   description:
-    "Galería de antigüedades y gabinete de tasación en Madrid: tasación pericial, compra directa de obras de arte y antigüedades, y gestión de herencias con discreción en toda España.",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: SITE.locality,
-    addressRegion: SITE.region,
-    addressCountry: SITE.country,
-  },
+    "Anticuarios a domicilio en Madrid y toda España: tasación, compra de antigüedades, muebles, cuadros y joyas, y valoración de herencias con discreción.",
   telephone: `+34 ${PHONES[0].slice(0, 3)} ${PHONES[0].slice(3, 6)} ${PHONES[0].slice(6)}`,
   contactPoint: PHONES.map((n) => ({ "@type": "ContactPoint", telephone: `+34 ${n.slice(0, 3)} ${n.slice(3, 6)} ${n.slice(6)}`, contactType: "atención al cliente", areaServed: "ES", availableLanguage: ["es"] })),
   areaServed,
-  knowsAbout: ["Antigüedades", "Tasación de arte", "Mobiliario antiguo", "Pintura antigua", "Plata antigua", "Bronces y esculturas", "Porcelana antigua", "Relojes antiguos", "Joyería española", "Numismática española", "Pieles y abrigos de piel"],
-  openingHours: undefined,
+  knowsAbout: ["Antigüedades", "Muebles antiguos", "Vargueños y muebles renacentistas españoles", "Pintura antigua", "Plata antigua", "Bronces y esculturas", "Porcelana antigua", "Relojes antiguos", "Joyería española", "Numismática española", "Pieles y abrigos de piel"],
   makesOffer: [
-    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tasación pericial de antigüedades y obras de arte", serviceType: "Tasación de antigüedades" }, price: "0", priceCurrency: "EUR", description: "Valoración orientativa gratuita y visita a domicilio" },
-    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Compra directa de antigüedades y obras de arte", serviceType: "Compra de antigüedades" } },
-    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tasación de herencias y testamentarias", serviceType: "Tasación de herencias" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tasación de antigüedades a domicilio", serviceType: "Tasación de antigüedades" }, price: "0", priceCurrency: "EUR", description: "Valoración orientativa gratuita y visita a domicilio" },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Compra de antigüedades a domicilio", serviceType: "Compra de antigüedades" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tasación de herencias y vaciado de viviendas", serviceType: "Tasación de herencias" } },
   ],
 });
 
@@ -49,7 +42,7 @@ function schemaGraph(page) {
   if (page.faq) webPage.mainEntity = page.faq.map((f) => ({ "@type": "Question", name: f.q.replace(/<[^>]+>/g, ""), acceptedAnswer: { "@type": "Answer", text: f.a.replace(/<[^>]+>/g, "") } }));
   graph.push(webPage);
   if (page.service) {
-    graph.push({ "@type": "Service", "@id": `${url}#servicio`, name: page.service.name, serviceType: page.service.type, description: page.description, provider: { "@id": BIZ_ID, "@type": "AntiqueStore", name: SITE.brand }, areaServed: page.service.area || areaServed, url, ...(page.service.free ? { offers: { "@type": "Offer", price: "0", priceCurrency: "EUR", description: "Valoración orientativa gratuita" } } : {}) });
+    graph.push({ "@type": "Service", "@id": `${url}#servicio`, name: page.service.name, serviceType: page.service.type, description: page.description, provider: { "@id": BIZ_ID, "@type": "ProfessionalService", name: SITE.brand }, areaServed: page.service.area || areaServed, url, ...(page.service.free ? { offers: { "@type": "Offer", price: "0", priceCurrency: "EUR", description: "Valoración orientativa gratuita" } } : {}) });
   }
   if (page.crumbs?.length > 1) {
     graph.push({ "@type": "BreadcrumbList", itemListElement: page.crumbs.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c.name, item: abs(c.href) })) });
@@ -70,6 +63,7 @@ function hero(page) {
       <h1>${h.h1.includes("<em>") ? h.h1 : h.h1.replace(/ en ([^<]+)$/, " en <em>$1</em>")}</h1>
       <p class="lead">${h.lead}</p>
       <p class="actions">${button(CTA, page.formHref)}${second}</p>
+      ${h.phone ? `<p class="hero__phone">Llámenos: ${phoneLinks()}</p>` : ""}
       ${facts}
     </div>
     <figure class="frame hero__media${frameRatio(h.img, 0.78, 1.3) < 1.05 ? " arch" : ""}" style="${ratioStyle(h.img, 0.78, 1.3)}">${pic(h.img, { sizes: "(min-width:1024px) 44vw, 100vw", eager: true, fit: fitFor(h.img, 0.78, 1.3) })}</figure>

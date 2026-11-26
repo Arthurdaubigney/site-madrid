@@ -1,17 +1,17 @@
 // Configuración central del sitio. Todo lo que el cliente debe completar vive aquí.
 
 export const SITE = {
-  brand: "Galería Anticuaria Aldaba",
+  brand: "Aldaba Anticuarios",
   short: "Aldaba",
   // Dominio público definitivo. Mientras no exista, se usa un dominio de reserva (.example).
   // Se puede fijar al compilar:  SITE_URL=https://www.midominio.es npm run build
-  url: (process.env.SITE_URL || "https://galeria-aldaba.example").replace(/\/$/, ""),
+  url: (process.env.SITE_URL || "https://aldaba-anticuarios.example").replace(/\/$/, ""),
   lang: "es-ES",
   locality: "Madrid",
   region: "Comunidad de Madrid",
   country: "ES",
   // Correo de reserva que usa el módulo de contacto mientras no haya formulario Tally.
-  email: "contacto@galeria-aldaba.example",
+  email: "contacto@aldaba-anticuarios.example",
   year: new Date().getFullYear(),
 };
 
@@ -53,10 +53,10 @@ export const NAV = [
     ],
   },
   { label: "Herencias", href: "/tasacion-herencias-madrid/" },
-  { label: "La galería", href: "/la-galeria/" },
+  { label: "Quiénes somos", href: "/quienes-somos/" },
 ];
 
-// Teléfonos de la galería (9 dígitos). Formato español +34 000 000 000; el enlace tel: lleva el prefijo +34.
+// Teléfonos de contacto (9 dígitos). Formato español +34 000 000 000; el enlace tel: lleva el prefijo +34.
 export const PHONES = ["625201148", "625201448"];
 export const phoneText = (n) => `+34 ${n.slice(0, 3)} ${n.slice(3, 6)} ${n.slice(6)}`;
 export const phoneHref = (n) => `tel:+34${n}`;

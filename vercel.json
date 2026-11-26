@@ -25,5 +25,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/la-galeria/",
+      "destination": "/quienes-somos/",
+      "permanent": true
+    }
   ]
 }

@@ -399,3 +399,5 @@ a.card:hover{border-color:var(--gold)}
 .foot__credit{text-decoration:none}
 .legal-data{display:grid;gap:var(--s2);margin:0 0 var(--s4)}
 .legal-data a{overflow-wrap:anywhere}
+.hero__phone{margin:var(--s5) 0 0;font-size:17px;color:var(--muted)}
+.hero__phone a{color:var(--ink);font-weight:600;font-size:18px}
