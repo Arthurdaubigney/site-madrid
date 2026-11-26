@@ -32,6 +32,7 @@ export const LEGAL = {
   sede: "21 rue du Docteur Tassin, 21200 Beaune (Francia)",
   hosting: "Vercel Inc.",
   hostingUrl: "https://vercel.com",
+  hostingAddress: "440 N Barranca Avenue #4133, Covina, CA 91723, Estados Unidos",
   email: "francoisseculapub@gmail.com",
 };
 
