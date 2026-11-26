@@ -36,7 +36,7 @@ export default [{
         { h3: "Plata antigua", p: "Soperas, juegos de té, candelabros y bandejas con marcas de platero.", img: "sopera-weyhe", href: P.plata, cta: "Ver plata" },
         { h3: "Bronces y esculturas", p: "Bronces patinados, mármoles y bustos de taller o de autor.", img: "bronce-yacente", href: P.bronces, cta: "Ver esculturas" },
         { h3: "Porcelana y cerámica", p: "Sèvres, Meissen, Buen Retiro y otras manufacturas europeas.", img: "sevres-perlas", href: P.porcelana, cta: "Ver porcelana" },
-        { h3: "Relojes y objetos de arte", p: "Relojes antiguos españoles, tabaqueras, cofres y esmaltes.", img: "caja-oro-bodson", href: P.relojes, cta: "Ver relojes" },
+        { h3: "Relojes y objetos de arte", p: "Relojes antiguos españoles, tabaqueras, cofres y esmaltes.", img: "reloj-bellver-tempus", href: P.relojes, cta: "Ver relojes" },
         { h3: "Joyería española", p: "Perlas de Mallorca, damasquinado de Toledo, azabache y coral.", img: "joya-collar-perlas", href: P.joyeria, cta: "Ver joyería" },
         { h3: "Monedas españolas", p: "Monedas de todas las épocas, materiales y tiradas.", img: "moneda-excelentes", href: P.monedas, cta: "Ver monedas" },
         { h3: "Pieles y abrigos de piel", p: "Abrigos, capas, estolas y manguitos antiguos y vintage.", img: "piel-manguito-marron", href: P.pieles, cta: "Ver pieles" },
