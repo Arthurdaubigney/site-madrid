@@ -30,7 +30,8 @@ export const LEGAL = {
   siret: "529 601 486 00010",
   iva: "FR51529601486",
   sede: "21 rue du Docteur Tassin, 21200 Beaune (Francia)",
-  domicilio: "Calle de Limonero, 22, Madrid",
+  hosting: "Vercel Inc.",
+  hostingUrl: "https://vercel.com",
   email: "francoisseculapub@gmail.com",
 };
 
