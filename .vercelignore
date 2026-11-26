@@ -1,0 +1,6 @@
+# Herramientas de desarrollo que el sitio no necesita para compilar
+.agents
+.claude
+.taste-skill
+tools
+node_modules

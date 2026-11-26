@@ -2,6 +2,7 @@
 import { mkdirSync, rmSync, writeFileSync, readFileSync, cpSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { createHash } from "node:crypto";
+import { execSync } from "node:child_process";
 import { SITE, TALLY_FORM_ID } from "./src/config.mjs";
 import { renderPage } from "./src/layout.mjs";
 import home from "./src/pages/home.mjs";
@@ -61,6 +62,11 @@ const urls = pages.map((p) => `<url><loc>${SITE.url}${p.path}</loc><changefreq>m
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>\n`);
 write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`);
 write("favicon.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 40"><rect width="34" height="40" fill="#f8f1e4"/><g fill="none" stroke="#7a1e2c"><path d="M3 39V16a14 14 0 0 1 28 0v23" stroke-width="2"/><circle cx="17" cy="25" r="6.4" stroke-width="2.2"/></g><path d="M7.5 39V17a9.5 9.5 0 0 1 19 0v22" fill="none" stroke="#a8782a" stroke-width="1.2"/><circle cx="17" cy="12" r="2" fill="#a8782a"/></svg>`);
+
+// Marca de versión: /version.txt indica qué commit y qué hora corresponden al sitio publicado.
+let sha = process.env.VERCEL_GIT_COMMIT_SHA || "";
+if (!sha) { try { sha = execSync("git rev-parse HEAD", { cwd: root }).toString().trim(); } catch { sha = "desconocido"; } }
+write("version.txt", `commit ${sha.slice(0, 7)}\ncompilado ${new Date().toISOString()}\npaginas ${pages.length}\n`);
 
 console.log(`✔ ${pages.length} páginas generadas en dist/ · Tally: ${TALLY_FORM_ID ? "configurado" : "pendiente (tarjeta de contacto)"}`);
 if (problems.length) console.log("⚠ SEO:\n  " + problems.join("\n  "));
